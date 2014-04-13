@@ -1,0 +1,10 @@
+D:\Home\Ziki\Cookoo\Cookoo\Origin\obj\Debug\ResolveAssemblyReference.cache
+D:\Home\Ziki\Cookoo\Cookoo\Origin\bin\Debug\Origin.dll
+D:\Home\Ziki\Cookoo\Cookoo\Origin\bin\Debug\Origin.pdb
+D:\Home\Ziki\Cookoo\Cookoo\Origin\obj\Debug\Origin.dll
+D:\Home\Ziki\Cookoo\Cookoo\Origin\obj\Debug\Origin.pdb
+C:\cookoo\CookooAPP\Cookoo\Origin\bin\Debug\Origin.dll
+C:\cookoo\CookooAPP\Cookoo\Origin\bin\Debug\Origin.pdb
+C:\cookoo\CookooAPP\Cookoo\Origin\obj\Debug\ResolveAssemblyReference.cache
+C:\cookoo\CookooAPP\Cookoo\Origin\obj\Debug\Origin.dll
+C:\cookoo\CookooAPP\Cookoo\Origin\obj\Debug\Origin.pdb

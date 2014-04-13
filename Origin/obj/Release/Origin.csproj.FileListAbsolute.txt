@@ -1,0 +1,5 @@
+D:\Home\Ziki\Cookoo\Cookoo\Origin\bin\Release\Origin.dll
+D:\Home\Ziki\Cookoo\Cookoo\Origin\bin\Release\Origin.pdb
+D:\Home\Ziki\Cookoo\Cookoo\Origin\obj\Release\ResolveAssemblyReference.cache
+D:\Home\Ziki\Cookoo\Cookoo\Origin\obj\Release\Origin.dll
+D:\Home\Ziki\Cookoo\Cookoo\Origin\obj\Release\Origin.pdb

@@ -1,0 +1,15 @@
+D:\Home\Ziki\Cookoo\Cookoo\CookooOrc\bin\Debug\CookooOrc.dll
+D:\Home\Ziki\Cookoo\Cookoo\CookooOrc\bin\Debug\CookooOrc.pdb
+D:\Home\Ziki\Cookoo\Cookoo\CookooOrc\obj\Debug\ResolveAssemblyReference.cache
+D:\Home\Ziki\Cookoo\Cookoo\CookooOrc\obj\Debug\CookooOrc.dll
+D:\Home\Ziki\Cookoo\Cookoo\CookooOrc\obj\Debug\CookooOrc.pdb
+C:\cookoo\CookooAPP\Cookoo\CookooOrc\bin\Debug\CookooOrc.dll
+C:\cookoo\CookooAPP\Cookoo\CookooOrc\bin\Debug\CookooOrc.pdb
+C:\cookoo\CookooAPP\Cookoo\CookooOrc\obj\Debug\ResolveAssemblyReference.cache
+C:\cookoo\CookooAPP\Cookoo\CookooOrc\obj\Debug\CookooOrc.dll
+C:\cookoo\CookooAPP\Cookoo\CookooOrc\obj\Debug\CookooOrc.pdb
+C:\ziki\Cookoo\CookooOrc\bin\Debug\CookooOrc.dll
+C:\ziki\Cookoo\CookooOrc\bin\Debug\CookooOrc.pdb
+C:\ziki\Cookoo\CookooOrc\obj\Debug\ResolveAssemblyReference.cache
+C:\ziki\Cookoo\CookooOrc\obj\Debug\CookooOrc.dll
+C:\ziki\Cookoo\CookooOrc\obj\Debug\CookooOrc.pdb

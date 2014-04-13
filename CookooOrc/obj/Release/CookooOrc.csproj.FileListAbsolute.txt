@@ -1,0 +1,5 @@
+D:\Home\Ziki\Cookoo\Cookoo\CookooOrc\bin\Release\CookooOrc.dll
+D:\Home\Ziki\Cookoo\Cookoo\CookooOrc\bin\Release\CookooOrc.pdb
+D:\Home\Ziki\Cookoo\Cookoo\CookooOrc\obj\Release\ResolveAssemblyReference.cache
+D:\Home\Ziki\Cookoo\Cookoo\CookooOrc\obj\Release\CookooOrc.dll
+D:\Home\Ziki\Cookoo\Cookoo\CookooOrc\obj\Release\CookooOrc.pdb
