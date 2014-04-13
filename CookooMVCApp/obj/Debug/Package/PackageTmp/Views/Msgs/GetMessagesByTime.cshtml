@@ -1,0 +1,64 @@
+﻿@model IEnumerable<CookooMVCApp.Models.MsgModel>
+
+@{
+    Layout = null;
+}
+
+  @{
+      
+      <div class="content_center content_max_width"><h1> @ViewBag.ConstStrings.MessagesHeader </h1></div>
+      <div class="separator"></div>
+
+      
+      foreach (var item in Model) {
+          
+          <div class="cookooRegion">
+            <div class="float-right lightText cookooMargin"><h4>@item.FromUser</h4></div>
+            <div class="float-left lightText cookooMargin content_center">
+                @{
+          DateTime l_time = (DateTime)item.MsgTime;
+                    }
+                                
+                <h4>@l_time.ToShortDateString()</h4>
+                <h4>@l_time.ToShortTimeString()</h4>
+                
+            
+              </div>
+
+            @{ if (!item.IsRead) {
+                <div class="content-center " id="newMsgString"><h3>@ViewBag.ConstStrings.NewMessage</h3></div>
+            }
+            }
+            
+             <div class="clear-fix cookooMargin"></div>
+         
+            <div class="getRcpHedaer "><h3 class="cookooMargin">@Html.Raw(item.Title)</h3></div>
+            <div class="getRcpTextContent cookooMargin">@Html.Raw(item.Content)</div>
+          </div>
+      }
+      
+   }
+
+
+  @using (Ajax.BeginForm("GetMessagesByTime", "Msgs",
+                new AjaxOptions {
+                    OnBegin = "DisplayAnimation('block')",
+                    OnComplete = "DisplayAnimation('none')",
+                    UpdateTargetId = "render_body_cookoo",
+                    HttpMethod = "Post",
+                    InsertionMode = InsertionMode.Replace
+                })) {
+
+      if (ViewBag.LastMsgIndex != null) {
+                        @Html.Hidden("lastIndex", (long)ViewBag.LastMsgIndex)
+      }
+
+
+
+      if (ViewBag.ExssitMore) {
+                
+                
+                 <input type="submit" value="More..." />                
+            }
+        }
+

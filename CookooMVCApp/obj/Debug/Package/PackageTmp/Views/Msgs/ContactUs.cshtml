@@ -1,0 +1,56 @@
+﻿@model CookooMVCApp.Models.MsgModel
+
+@{
+   
+    Layout = null;
+}
+
+<div class="content_center content_max_width"><h1> @ViewBag.ConstStrings.ContactUsHeader </h1></div>
+<div class="separator"></div>
+
+   <p>
+     @ViewBag.ConstStrings.ContactUsDis1 
+    </p>
+
+     <p>
+      @ViewBag.ConstStrings.ContactUsDis2
+    </p>
+
+     <p>
+        
+         @ViewBag.ConstStrings.ContactUsDis3
+    </p>
+
+
+            @using (Ajax.BeginForm("ContactUs", "Msgs",
+                        new AjaxOptions {
+                            HttpMethod = "Post",
+                            InsertionMode = InsertionMode.Replace,
+                            UpdateTargetId = "render_body_cookoo",
+                            OnBegin = "DisplayAnimation('block')",
+                            OnComplete = "DisplayAnimation('none')"
+                        }
+                        )) {
+            <fieldset>
+            <ol> 
+                <li>
+                     @ViewBag.ConstStrings.MsgTiltle   
+                     @Html.TextBoxFor(m => m.Title)
+                     @Html.ValidationMessageFor(m => m.Title)
+                </li>
+                <li>
+                  @ViewBag.ConstStrings.MsgContent   
+                  @Html.TextAreaFor(m => m.Content ,5, 20, null)
+                  @Html.ValidationMessageFor(m => m.Content)
+                </li>
+           
+            </ol>
+            </fieldset>
+                
+            <div class="content-center">
+                <input type="submit" value="@ViewBag.ConstStrings.Send" />
+            </div>
+            }
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.js")" type="text/javascript"></script>

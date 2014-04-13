@@ -1,0 +1,26 @@
+﻿@model CookooMVCApp.Models.LanguageModel
+@{
+    ViewBag.Title = "Manage Account";
+}
+
+
+<p>You're logged in as <strong>@User.Identity.Name</strong>.</p>
+<p>@ViewBag.StatusMessage</p>
+<section id="externalLogins">
+
+    @using (Html.BeginForm("Manage", "Account",FormMethod.Post)) {
+        @Html.AntiForgeryToken()
+        @Html.LabelFor(m => m.Language)
+        @Html.DropDownListFor(m => m.Language, new SelectList(ViewBag.Languages))
+
+         <input type="submit" value="Change Language" />
+    }
+  
+
+    @Html.Action("RemoveExternalLogins")
+
+    <h3>Add an external login</h3>
+    @Html.Action("ExternalLoginsList", new { ReturnUrl = ViewBag.ReturnUrl })
+</section>
+
+

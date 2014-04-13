@@ -1,0 +1,58 @@
+﻿@model CookooMVCApp.Models.SndUrlRcpModel
+
+@{
+    Layout = null;
+    string actionString;
+    string title;
+    string urlTitle;
+    if (ViewBag.IsEditMode) {
+
+        urlTitle = ViewBag.ConstStrings.EditUrlLink;
+        actionString = ViewBag.ConstStrings.Save;
+        title = ViewBag.ConstStrings.EditUrlRecipeTitle;
+        
+    }   
+    else {
+
+        urlTitle = ViewBag.ConstStrings.NewUrlLink;
+        actionString = ViewBag.ConstStrings.Add;
+        title = ViewBag.ConstStrings.NewUrlRecipeTitle;
+	} 
+}
+
+<div class="content_center content_max_width"><h1> @title </h1></div>
+<div class="separator"></div>
+
+@using (Ajax.BeginForm("SaveUrlRecipe", "Home", new { a_IsEditMode = ViewBag.IsEditMode },
+                new AjaxOptions {
+                    UpdateTargetId = "render_body_cookoo",
+                    HttpMethod = "Post", InsertionMode = InsertionMode.Replace,
+                    OnBegin = "DisplayAnimation('block')",
+                    OnComplete = "DisplayAnimation('none')"
+                }
+               )) {
+    
+    @Html.Hidden("a_IsEditMode", (object)ViewBag.IsEditMode);
+    @Html.HiddenFor(m => m.ID);
+                                  
+        <fieldset>
+         <ol> 
+             @Html.Partial("_RecipeAddedBaseDetails")
+
+            <li>
+                @urlTitle
+                 <div class="cookooRegion">     
+                    @Html.TextBoxFor(m => m.Url, new { type = "url" })  
+                 </div>  
+            </li>    
+        </ol> 
+        </fieldset>
+        <div class="content-center">
+             <input type="submit" value="@actionString" />
+        </div>
+}
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.js")" type="text/javascript"></script>
+
+

@@ -1,0 +1,88 @@
+﻿@model CookooMVCApp.Models.SndCKRcpModel
+
+       @{
+           if (ViewBag.WithLayot == null || !ViewBag.WithLayot) {
+               Layout = null;
+           }
+           
+            string actionString;
+            string pictTitle;
+            string title;
+            if (ViewBag.IsEditMode) {
+                pictTitle = ViewBag.ConstStrings.EditCKAddPic;
+                actionString = ViewBag.ConstStrings.Save;
+                title = ViewBag.ConstStrings.EditCookooRecipeTitle;
+            }   
+            else {
+                pictTitle = ViewBag.ConstStrings.NewCKAddPic;
+                actionString = ViewBag.ConstStrings.Add;
+                title = ViewBag.ConstStrings.NewCookooRecipeTitle;
+	        } 
+        }
+
+<div class="content_center content_max_width"><h1> @title</h1></div>
+<div class="separator"></div>
+
+@using (Html.BeginForm("SaveCkRecipe", "Home", FormMethod.Post, new { enctype = "multipart/form-data" })){ 
+ 
+        @Html.Hidden("a_IsEditMode", (object)ViewBag.IsEditMode);
+        @Html.HiddenFor(m => m.ID);
+                                            
+        <fieldset>
+         <ol> 
+            
+            @Html.Partial("_RecipeAddedBaseDetails")
+              <li>
+                @ViewBag.ConstStrings.NewCKIngredients
+                @Html.TextAreaFor(m => m.Ingredients, 10, 20, null)
+                @Html.ValidationMessageFor(m => m.Ingredients)
+            </li>
+                    
+            <li>
+                @ViewBag.ConstStrings.NewCKInstructions
+                @Html.TextAreaFor(m => m.Instructions, 10, 20, null)
+                @Html.ValidationMessageFor(m => m.Instructions)
+            </li>  
+            <li>
+                <label>@ViewBag.ConstStrings.NewCKPreparationTime</label>
+                <div>              
+                    <table>
+                        <tr>
+                            <td>             
+                                @Html.DropDownListFor(m => m.PreparationMinuteTime, new SelectList(ViewBag.Minutes), (string)@ViewBag.ConstStrings.NewCKMinute, new { @class = "PretimeInput" }) 
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                              @Html.DropDownListFor(m => m.PreparationHourTime, new SelectList(ViewBag.Houers), (string)@ViewBag.ConstStrings.NewCKHour, new { @class = "PretimeInput" })
+                             </td>
+                        </tr>
+                    </table>
+              
+              
+                </div>
+            </li>
+              <li>
+                @ViewBag.ConstStrings.NewCKDoesCount
+                @Html.TextBoxFor(m => m.DoesCount)
+                @Html.ValidationMessageFor(m => m.DoesCount)
+            </li>
+             <li>
+                @pictTitle
+                <div class="cookooRegion">          
+                     @Html.TextBoxFor(m => m.FileModel.files, new { type = "file" })
+                </div>
+                @Html.ValidationMessageFor(m => m.FileModel.files)
+                
+            </li>
+        </ol>
+        </fieldset>
+        <div class="content-center">
+        <input type="submit" value="@actionString" />
+
+        </div>
+}
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.js")" type="text/javascript"></script>

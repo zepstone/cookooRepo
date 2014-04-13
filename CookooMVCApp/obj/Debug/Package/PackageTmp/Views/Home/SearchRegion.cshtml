@@ -1,0 +1,155 @@
+﻿    @model CookooMVCApp.Models.SearchModel 
+
+@{
+    Layout = null;
+}
+
+<script type="text/javascript">
+
+    var selectedCtgry;
+
+    function buttonClick(a_category) {
+
+        var selector = document.getElementById('HiddenListBox');
+        selectedCtgry = selector.options[a_category];
+        selectedCtgry.selected = true;
+
+    }
+
+    var defalutColor;
+
+    function onMouseOver(a_category) {
+        var fimg = document.getElementById('ctgryRegularIcon' + a_category);
+        var simg = document.getElementById('ctgryfocusIcon' + a_category);
+
+        defalutColor = document.getElementById('ctgrytable' + a_category).style.color;
+
+        document.getElementById('ctgrytable' + a_category).style.color = '#D2DE26';
+
+        simg.style.display = 'block';
+        fimg.style.display = 'none';
+
+    }
+
+    function onMouseOut(a_category) {
+        var fimg = document.getElementById('ctgryRegularIcon' + a_category);
+        var simg = document.getElementById('ctgryfocusIcon' + a_category);
+
+        document.getElementById('ctgrytable' + a_category).style.color = defalutColor;
+
+        fimg.style.display = 'block';
+        simg.style.display = 'none';
+
+    }
+
+    function OnCompleteSendAdvnSearch() {
+        DisplayAnimation('none')
+        selectedCtgry.selected = false;
+
+
+    }
+
+    
+</script>
+
+@*@using (Html.BeginForm("GetRecipes", "Home", FormMethod.Post)) {*@
+@using (Ajax.BeginForm("GetRecipes", "Home", new AjaxOptions {
+    UpdateTargetId = "render_body_cookoo",
+    HttpMethod = "Post", InsertionMode = InsertionMode.Replace,
+    OnBegin = "DisplayAnimation('block')",
+    OnComplete = "OnCompleteSendAdvnSearch"},
+    new { @class = "backToMainForm" })) {
+    <div class="content_center">
+        <fieldset>
+        <ol> 
+            <li>
+                  <div class="search-wrapper">
+                    @Html.TextBoxFor(m => m.SearchText, new { @class = "search-field", id = "SearchRegionStringInput" })
+                    <input type="submit" class="search-button light" value="@ViewBag.ConstStrings.Search" />
+                </div>
+                <div id="SearchRegionAutoCompleteResults"></div>
+               
+            </li>
+       
+            <li>
+                <table id="SearchInCurrentUserBookTable">
+                    <tr>
+                        <td>@Html.CheckBoxFor(m => m.SearchInCurrentUserBook, new { onclick = "onCheckBoxChange()" })</td>
+                        <td>@ViewBag.ConstStrings.SearchInMyBoob</td>
+                    </tr>
+                </table>
+            </li>
+            <li>
+                
+                    @{List<int> l_ctgrs = new List<int>();
+
+                      foreach (var ctgryEnum in ViewBag.ConstStrings.Categories.Keys) {
+
+                          int l_ctgryIndex = (int)ctgryEnum;
+                          l_ctgrs.Add(l_ctgryIndex);
+              
+                        <button id="catgryButton" onclick="buttonClick(@(l_ctgryIndex))" 
+                                onmouseover="onMouseOver(@l_ctgryIndex)" 
+                                onmouseout="onMouseOut(@l_ctgryIndex)">
+                
+                                    @{
+                          string l_fi = "ctgryRegularIcon" + l_ctgryIndex;
+                          string l_si = "ctgryfocusIcon" + l_ctgryIndex;
+                          string l_t = "ctgrytable" + l_ctgryIndex;
+                                    }
+                                    <table id=@l_t> 
+                                        <tr>
+                                            <td>
+                                                <div class="ctgrIcon iconBackground" id=@l_fi></div>
+                                                <div class="ctgrIcon iconBackground" id=@l_si style="display:none"></div>
+                                            </td>
+                                                <td>
+                                                    @ViewBag.ConstStrings.Categories[ctgryEnum]
+                                            </td>
+                                        </tr>
+                                    </table>
+                        </button>
+                      }
+
+                      @Html.DropDownListFor(m => m.SelectedCtgrs, new SelectList(l_ctgrs), "null", new { style = "display:none", id = "HiddenListBox" });
+                    } 
+                    
+
+            </li>
+        </ol>
+        </fieldset>
+    </div>
+}
+
+    <script type="text/javascript">
+                        
+                        var l_ifSearchInUserOnly = true;
+
+                        function onCheckBoxChange(){
+                           
+                            l_ifSearchInUserOnly = document.getElementById("SearchInCurrentUserBook").checked;
+                            
+                            var link = "@Url.Action("RecipesAutoComplete", "Home")" + "?a_inCurrentUser=" + l_ifSearchInUserOnly;
+
+                            $("#SearchRegionStringInput").autocomplete("option","source",link);
+                            }
+
+                        
+
+                        $(function () {
+
+                            l_ifSearchInUserOnly = document.getElementById("SearchInCurrentUserBook").checked;
+                            
+                            var link = "@Url.Action("RecipesAutoComplete", "Home")" + "?a_inCurrentUser=" + l_ifSearchInUserOnly;
+
+                            $("#SearchRegionStringInput").autocomplete({
+                               
+                                source: link,
+                                appendTo: "#SearchRegionAutoCompleteResults",
+                        
+                            });
+                        });
+    </script>
+                    
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.js")" type="text/javascript"></script>

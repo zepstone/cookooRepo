@@ -1,0 +1,11 @@
+D:\Home\Ziki\Cookoo\Cookoo\CookooBL\bin\Release\CookooBL.dll
+D:\Home\Ziki\Cookoo\Cookoo\CookooBL\bin\Release\CookooBL.pdb
+D:\Home\Ziki\Cookoo\Cookoo\CookooBL\bin\Release\CookooDAL.dll
+D:\Home\Ziki\Cookoo\Cookoo\CookooBL\bin\Release\Origin.dll
+D:\Home\Ziki\Cookoo\Cookoo\CookooBL\bin\Release\CookooOrc.dll
+D:\Home\Ziki\Cookoo\Cookoo\CookooBL\bin\Release\CookooDAL.pdb
+D:\Home\Ziki\Cookoo\Cookoo\CookooBL\bin\Release\Origin.pdb
+D:\Home\Ziki\Cookoo\Cookoo\CookooBL\bin\Release\CookooOrc.pdb
+D:\Home\Ziki\Cookoo\Cookoo\CookooBL\obj\Release\ResolveAssemblyReference.cache
+D:\Home\Ziki\Cookoo\Cookoo\CookooBL\obj\Release\CookooBL.dll
+D:\Home\Ziki\Cookoo\Cookoo\CookooBL\obj\Release\CookooBL.pdb

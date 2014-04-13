@@ -1,0 +1,83 @@
+﻿@model CookooMVCApp.Models.SearchModel  
+
+@{
+
+    Layout = null;
+}
+
+<div class="content_center content_max_width"><h1> @ViewBag.ConstStrings.AdvencedStringTitle</h1></div>
+<div class="separator"></div>
+
+@*@using (Html.BeginForm("GetRecipes", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))*@
+@using (Ajax.BeginForm("GetRecipes", "Home", 
+    new AjaxOptions { OnBegin = "DisplayAnimation('block')",
+    OnComplete = "DisplayAnimation('none')",
+    UpdateTargetId = "render_body_cookoo",
+    HttpMethod = "Post",
+    InsertionMode = InsertionMode.Replace })) {
+ 
+         <fieldset>
+             <ol> 
+                 <li>
+                       <div class="search-wrapper">
+                        @Html.TextBoxFor(m => m.SearchText, new { @class = "search-field" })
+                        <input type="submit" class="search-button light" value="@ViewBag.ConstStrings.Search" />
+                        </div>
+                      
+                 </li>
+                  <li>
+                    @Html.ValidationMessageFor(m => m.SearchText)
+                 </li>
+                 <li>
+                    <table id="SearchInCurrentUserBookTable">
+                        <tr>
+                            <td>@Html.CheckBoxFor(m => m.SearchInCurrentUserBook)</td>
+                            <td>@ViewBag.ConstStrings.SearchInMyBoob</td>
+                        </tr>
+                    </table>
+                 </li>
+                 <li>
+                    @{
+                    string l_className = "chzn-select";
+                    if (ViewBag.Direction == "rtl") {
+                        l_className += " chzn-rtl";
+                    }
+              
+                            @Html.ListBoxFor(m => m.SelectedCtgrs, (IEnumerable<SelectListItem>)ViewBag.SelectListCtgrs,
+                                                                new { @class = l_className, data_placeholder = @ViewBag.ConstStrings.SerchByCategories })
+                    }
+                
+                </li>
+                <li>
+                    @ViewBag.ConstStrings.NewRcpDescription
+                    @Html.TextAreaFor(m => m.Discription, 5, 20, null)
+                </li>
+                 <li>
+
+            @ViewBag.ConstStrings.SearchByOwnerName
+            @Html.TextBoxFor(m => m.OwnerName, new  {id ="UserNameInput" })
+            <div id="results"></div>
+
+            <script type="text/javascript">
+                $(function () {
+                    $("#UserNameInput").autocomplete({
+                        source: '@Url.Action("UsersAutoComplete","Home")',
+                        appendTo: "#results",
+                        
+                    });
+                });
+            </script>
+                 
+        </li>
+        </ol>
+</fieldset>
+
+}
+
+
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.js")" type="text/javascript"></script>
+ <script src="~/Content/Choosen/chosen.jquery.js" type="text/javascript"></script>
+<link href="~/Content/Choosen/chosen.css" rel="stylesheet"  type="text/css" />
+<script > $(".chzn-select").chosen();</script>

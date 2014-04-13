@@ -1,0 +1,22 @@
+﻿@model CookooMVCApp.Models.LoginModel
+
+@{
+    ViewBag.Title = "Log in";
+
+    <div class="content_center content_max_width"><h1> Log in </h1></div>
+    <div class="separator"></div>
+    
+   <div class="content_center">
+         <p>
+           @ViewBag.ConstStrings.LogInQstDis
+         </p>
+           <p>
+            @ViewBag.ConstStrings.LogInAnsDis
+         </p>
+         @*@ViewBag.ConstStrings.LogInDis*@
+    </div>
+    
+    @Html.Action("ExternalLoginsList", new { ReturnUrl = ViewBag.ReturnUrl })
+
+    }
+

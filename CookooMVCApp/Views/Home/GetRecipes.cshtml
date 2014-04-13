@@ -1,0 +1,44 @@
+﻿@model CookooMVCApp.Models.SearchModel
+@{
+    Layout = null; 
+}
+
+<div class="content_center content_max_width"><h1> @ViewBag.ConstStrings.SearchResultTitle </h1></div>
+<div class="separator"></div>
+
+@{ 
+    if (ViewBag.DontExsistRcps) {
+         <label>There is no recipes...</label>  
+    }
+    else if (!ViewBag.ExssitMore && ViewBag.Recipes == null)
+	{
+         <label>There is no more recipes...</label>  
+	}
+    else {
+        using (Ajax.BeginForm("GetRecipes", "Home",
+                new AjaxOptions {
+                    OnBegin = "DisplayAnimation('block')",
+                    OnComplete = "DisplayAnimation('none')",
+                    UpdateTargetId = "render_body_cookoo",
+                    HttpMethod = "Post",
+                    InsertionMode = InsertionMode.Replace
+                })) {
+            
+             @Html.HiddenFor(m => m.SelectedCtgrs)
+             @Html.HiddenFor(m => m.Discription)
+             @Html.HiddenFor(m => m.LastIndex)
+             @Html.HiddenFor(m => m.SearchText)
+             @Html.HiddenFor(m => m.OwnerName)
+             @Html.HiddenFor(m => m.SearchInCurrentUserBook)
+
+            <div class="content_center"><h2> @Model.SearchText </h2> </div>
+            @Html.Partial("_RecipesPartial")
+
+            if (ViewBag.ExssitMore) {
+                 <input type="submit" value="More..." />                
+            }
+        }
+    }
+}
+
+

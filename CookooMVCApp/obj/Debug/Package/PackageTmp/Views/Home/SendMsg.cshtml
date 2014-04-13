@@ -1,0 +1,26 @@
+﻿@model CookooMVCApp.Models.MsgModel
+
+@{
+    ViewBag.Title = "Send Msg";
+}
+
+@using (Html.BeginForm("SendMsg", "Home", FormMethod.Post))
+{
+    @Html.HiddenFor(m => m.SendUserID)
+    @Html.HiddenFor(m => m.ToUserID)
+    @Html.HiddenFor(m => m.RecipeID)
+
+    <ol> 
+        <li>
+            <label>Send user : @Model.SendUserID</label>
+            <label>To user : @Model.ToUserID</label>
+        </li>
+        <li>
+            @Html.LabelFor(m => m.Msg)
+            @Html.TextAreaFor(m => m.Msg, 10, 20, null)
+            @Html.ValidationMessageFor(m => m.Msg)
+        </li>        
+    </ol>
+    
+    <input type="submit" value="Send message to @Model.ToUserID" />
+}

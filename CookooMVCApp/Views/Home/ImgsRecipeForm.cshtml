@@ -1,0 +1,58 @@
+﻿@model CookooMVCApp.Models.SndImgsRcpModel
+
+@{
+    if (ViewBag.WithLayot == null || !ViewBag.WithLayot) {
+        Layout = null;
+    }
+    string actionString;
+    string pictTitle;
+    string title;   
+    if (ViewBag.IsEditMode) {
+        pictTitle = ViewBag.ConstStrings.EditImgAddPic;
+        actionString = ViewBag.ConstStrings.Save;
+        title = ViewBag.ConstStrings.EditImagesRecipeTitle;
+    }   
+    else {
+        pictTitle = ViewBag.ConstStrings.NewImgAddPics;
+        actionString = ViewBag.ConstStrings.Add;
+        title = ViewBag.ConstStrings.NewImagesRecipeTitle;
+	} 
+}
+
+<div class="content_center content_max_width"><h1> @title </h1></div>
+<div class="separator"></div>
+
+
+@using (Html.BeginForm("SaveImgsRecipe", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+        @Html.Hidden("a_IsEditMode", (object)ViewBag.IsEditMode);
+        @Html.HiddenFor(m => m.ID);
+    
+        <fieldset>
+             <ol> 
+
+                @Html.Partial("_RecipeAddedBaseDetails")
+
+                 <li>
+
+                  @pictTitle
+                    <div class="cookooRegion">  
+                         @if (!ViewBag.IsEditMode) {
+                             @Html.TextBoxFor(m => m.files, new { type = "file", multiple = ""})
+                         }
+                         else {
+                             @Html.TextBoxFor(m => m.files, new { type = "file", multiple = "", data_val = false })
+                         }
+                          @Html.ValidationMessageFor(m => m.files)
+                     </div>
+                 </li>
+              </ol>
+         </fieldset>
+        <div class="content-center">
+            <input type="submit" value="@actionString" />
+        </div>
+}
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.js")" type="text/javascript"></script>

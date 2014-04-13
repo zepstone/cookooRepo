@@ -1,0 +1,43 @@
+﻿@model CookooOrc.UrlRcp
+
+@{
+    if (!ViewBag.WithLayot) {
+        Layout = null;
+    }
+    ViewBag.EditRcpActionName = "EditUrlRecipe";
+    }
+
+<div class="content_center content_max_width"><h1> @Model.RecipeName </h1></div>
+<div class="separator"></div>
+
+ <div class="iconBackground" id="SearchResRecLinkIcon"></div>
+
+ <div class="cookooRegion"> 
+    <div class="getRcpTextContent">@Model.Description</div>
+</div>
+
+
+ <div class="cookooRegion"> 
+    <div class="getRcpHedaer"><h3>@ViewBag.ConstStrings.GetUrlRcpLink</h3></div>
+    <a id="SearchResRecName" href="@Model.RcpUrl" target="_blank">@Model.RecipeName</a>
+</div>
+
+ <div class="cookooRegion"> 
+    <div class="getRcpHedaer"><h3>@ViewBag.ConstStrings.GetCKRcpCategries</h3></div>
+    <div class="getRcpTextContent">
+            @{ foreach (var item in @Model.Categories) {
+                @(item + " ")
+            }
+            }
+    </div>
+</div>
+  <div class="cookooRegion">
+    <label>@ViewBag.ConstStrings.GetRecipeOwner</label>
+     <label>@ViewBag.OwnerName</label>
+  </div>
+
+
+<div class="content_center">
+        @Html.Partial("_RecipeActions")
+
+</div>

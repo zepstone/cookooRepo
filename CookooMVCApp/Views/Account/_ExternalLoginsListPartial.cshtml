@@ -1,0 +1,22 @@
+﻿
+
+@using (Html.BeginForm("ExternalLogin", "Account", new { ReturnUrl = ViewBag.ReturnUrl }))
+    {
+        @Html.AntiForgeryToken()
+        <fieldset id="socialLoginList">
+        <div class="content_center">
+         <p>
+                <button class="imgClass" id="googleButton" type="submit" name="provider" 
+                        value="@ViewBag.GoogleProvider.AuthenticationClient.ProviderName"></button>
+         </p>
+         <p>         
+                <button  class="imgClass" id="faceBookButton" type='submit' name="provider"
+                 value="@ViewBag.FaceBook.AuthenticationClient.ProviderName"></button>
+           </p>
+          @* <p>        
+                <button type='button' class="imgClass" id="twitterButton"></button>
+           </p>*@
+       </div>
+        </fieldset>
+    }
+

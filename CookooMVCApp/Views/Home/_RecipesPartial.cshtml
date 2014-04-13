@@ -1,0 +1,64 @@
+﻿
+@{
+
+    foreach (var item in ViewBag.Recipes) {
+        CookooMVCApp.Models.RcpSearchResModel l_currentRec = item as CookooMVCApp.Models.RcpSearchResModel;
+
+        string iconType = string.Empty;
+        string linkAction = string.Empty;
+            
+        switch (l_currentRec.RecipeSrcEnum) {
+            case CookooOrc.RecipeSrcEnum.CooKooRecipe:
+            iconType = "SearchResRecCKIcon";
+            linkAction = "GetCKRecipe";
+            break;
+            case CookooOrc.RecipeSrcEnum.UrlRecipe:
+            iconType = "SearchResRecLinkIcon";
+            linkAction = "GetUrlRecipe";
+            break;
+            case CookooOrc.RecipeSrcEnum.ImageRecipe:
+            iconType = "SearchResRecImgIcon";
+            linkAction = "GetImagesRecipe";
+            break;
+
+        }
+        
+        <div class="cookooRegion">
+            <div>
+                <table>
+                    <tr>
+                        <td>
+                             @Ajax.ActionLink(l_currentRec.RecipeName, linkAction, "Home", new { a_ID = l_currentRec.ID, a_WithLayot = false }, new AjaxOptions {
+                            UpdateTargetId = "render_body_cookoo",
+                            HttpMethod = "Get", InsertionMode = InsertionMode.Replace,
+                            OnBegin = "DisplayAnimation('block')",
+                            OnComplete = "DisplayAnimation('none')"
+                        }, new { id = "SearchResRecName" })
+                         
+                        </td>
+                         <td>
+                            <div class="iconBackground" id="@iconType"/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            @if (item.ImageSrc != null) {
+                <div id="SearchResConteinerImg" >
+                    <img id="SearchResImg" src="@l_currentRec.ImageSrc" alt="@l_currentRec.RecipeName"/>
+                </div>
+            } 
+  
+            <div id="SearchDisText">
+                    @item.Description
+            </div>  
+    
+                                  
+            
+        </div>  
+    }
+    
+}
+
+
+

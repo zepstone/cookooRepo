@@ -1,0 +1,47 @@
+﻿ @model CookooOrc.ImgsRtnRcp
+
+@{
+    if (!ViewBag.WithLayot) {
+        Layout = null;
+    }
+
+    ViewBag.EditRcpActionName = "EditImgsRecipe";
+}
+
+<div class="content_center content_max_width"><h1> @Model.RecipeName </h1></div>
+<div class="separator"></div>
+
+    <div class="iconBackground" id="SearchResRecImgIcon"></div>
+
+    <div class="cookooRegion"> 
+        <div class="getRcpTextContent">@Model.Description</div>
+    </div>
+
+    @foreach (var item in Model.RcpImages) {
+    <div >
+        <img id="getCkRecImages" src="@Url.Action("GetPhoto", new { a_ID = item })" />
+    </div>
+    }
+                  
+
+    <div class="cookooRegion"> 
+        <div class="getRcpHedaer"><h3>@ViewBag.ConstStrings.GetCKRcpCategries</h3></div>
+        <div class="getRcpTextContent">
+                @{ foreach (var item in @Model.Categories) {
+                    @(item + " ")
+                }
+                }
+        </div>
+    </div>
+
+    <div class="cookooRegion">
+        <label>@ViewBag.ConstStrings.GetRecipeOwner</label>
+            <label>@ViewBag.OwnerName</label>
+    </div>
+
+    <div class="content_center">
+            @Html.Partial("_RecipeActions")
+
+    </div>
+
+                

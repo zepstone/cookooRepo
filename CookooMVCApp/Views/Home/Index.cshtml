@@ -1,0 +1,68 @@
+﻿
+@{
+    if (ViewBag.WithLayout!= null && !ViewBag.WithLayout) {
+        Layout = null;
+    }
+    
+    string title = ViewBag.ConstStrings.HelloTitle + " " + User.Identity.Name + "!!";
+    ViewBag.Title = title;
+}
+
+    
+    <div class="content_center content_max_width"><h1> @title </h1></div>
+    <div class="separator"></div>
+
+     <p>
+     @ViewBag.ConstStrings.HomePageDis1 
+    </p>
+
+     <p>
+      @ViewBag.ConstStrings.HomePageDis2
+    </p>
+
+     <p>
+        
+         @ViewBag.ConstStrings.HomePageDis3
+    </p>
+  
+     <table>
+
+         <tr>
+            <td>
+             <div class="iconBackground" id="SearchResRecCKIcon"></div>
+            </td>
+             <td>
+              @ViewBag.ConstStrings.CKRcpHeader
+             
+            </td>
+        </tr>
+
+         <tr>
+         <td>
+              <div class="iconBackground" id="SearchResRecLinkIcon"></div>
+            </td>
+            <td>
+             @ViewBag.ConstStrings.ImageRcpHeader
+            </td>
+             
+        </tr>
+
+         <tr>
+          <td>
+              <div class="iconBackground" id="SearchResRecImgIcon"></div>
+            </td>
+            <td>
+              @ViewBag.ConstStrings.UrlRcpHeader
+            </td>
+            
+        </tr>
+
+    </table>
+
+     <p>
+      @ViewBag.ConstStrings.HomePageDis4
+    </p>
+
+     <p>
+     <strong> @ViewBag.ConstStrings.HomePageDis5</strong>
+    </p>

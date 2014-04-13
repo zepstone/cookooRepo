@@ -1,0 +1,445 @@
+﻿<!DOCTYPE html>
+<html lang="en" style="direction:@ViewBag.Direction;">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title </title>
+        <link href="~/Content/Images/cookoo_icon.gif" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+
+
+        <meta property="fb:app_id" content="200117343498718"/> 
+	    <meta property="og:type" content="website" /> 
+	    <meta property="og:url" content="http://www.cookoo.us" />
+	    <META property="og:title" content="cookoo ספר מתכונים" />
+	    <META property="og:site_name" content="cookoo" />
+
+
+        @Styles.Render("~/Content/css")
+        @System.Web.Optimization.Scripts.Render("~/bundles/modernizr")
+        <script src="@Url.Content("~/Scripts/jquery-1.9.1.min.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+        @Styles.Render("~/Content/themes/base/css")
+        <script src="@Url.Content("~/Scripts/jquery-ui-1.8.20.min.js")" type="text/javascript"></script>
+        
+        @RenderSection("scripts", required: false)
+        @System.Web.Optimization.Scripts.Render("~/Scripts/myClientValidation.js")
+        @System.Web.Optimization.Scripts.Render("~/Content/themes/bootstrap/js/bootstrap.js")
+        <script src="@Url.Content("~/Scripts/blocking.js")" type="text/javascript"></script>
+
+        <script type="text/javascript">
+            var cSpeed = 8;
+            var cWidth = 60;
+            var cHeight = 60;
+            var cTotalFrames = 12;
+            var cFrameWidth = 60;
+            
+            var cImageSrc = "@Url.Content("~/Content/Images/Loading.gif")";
+            var cImageTimeout = false;
+            var cIndex = 0;
+            var cXpos = 0;
+            var cPreloaderTimeout = false;
+            var SECONDS_BETWEEN_FRAMES = 0;
+
+            function DisplayAnimation(a_display) {
+                if (a_display == 'none') {
+                    $.unblockUI()
+                }
+                else {
+                    $.blockUI({ message: $('#loaderDiv') }); 
+                   
+                }
+            }
+
+            function startAnimation() {
+              
+                document.getElementById('loaderImage').style.backgroundImage = 'url(' + cImageSrc + ')';
+                document.getElementById('loaderImage').style.width = cWidth + 'px';
+                document.getElementById('loaderImage').style.height = cHeight + 'px';
+
+                //FPS = Math.round(100/(maxSpeed+2-speed));
+                FPS = Math.round(100 / cSpeed);
+                SECONDS_BETWEEN_FRAMES = 1 / FPS;
+
+                cPreloaderTimeout = setTimeout('continueAnimation()', SECONDS_BETWEEN_FRAMES / 1000);
+
+            }
+
+            function continueAnimation() {
+
+                cXpos += cFrameWidth;
+                //increase the index so we know which frame of our animation we are currently on
+                cIndex += 1;
+
+                //if our cIndex is higher than our total number of frames, we're at the end and should restart
+                if (cIndex >= cTotalFrames) {
+                    cXpos = 0;
+                    cIndex = 0;
+                }
+
+                if (document.getElementById('loaderImage'))
+                    document.getElementById('loaderImage').style.backgroundPosition = (-cXpos) + 'px 0';
+
+                cPreloaderTimeout = setTimeout('continueAnimation()', SECONDS_BETWEEN_FRAMES * 1000);
+            }
+
+            function stopAnimation() {//stops animation
+                clearTimeout(cPreloaderTimeout);
+                cPreloaderTimeout = false;
+            }
+
+            function imageLoader(s, fun)//Pre-loads the sprites image
+            {
+                clearTimeout(cImageTimeout);
+                cImageTimeout = 0;
+                genImage = new Image();
+                genImage.onload = function () { cImageTimeout = setTimeout(fun, 0) };
+                genImage.onerror = new Function('alert(\'Could not load the image\')');
+                genImage.src = s;
+            }
+
+            //The following code starts the animation
+            new imageLoader(cImageSrc, 'startAnimation()');
+
+           $(window).resize(function(){location.reload();});
+
+        </script>
+
+    </head>
+    <body>
+    <div id="fb-root"></div>
+        <script>    (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+                fjs.parentNode.insertBefore(js, fjs);
+            } (document, 'script', 'facebook-jssdk'));</script>
+            <div id="loaderDiv" style="display:none">
+                <div id="loaderImage" style="margin: 40px auto"></div>
+            </div>
+        @*container_first_second_divs & first_div & second_div is garbege to
+        do that header's shadow go on the main*@
+        <div id="container_first_second_divs"> 
+            <div id="second_div">
+                <header>    
+                    <div>
+                        <div class="content-center">
+                             <a id="logo" href="@Url.Action("Index", "Home")">
+                                <svg version="1.1" id="שכבה_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	                                width="208px" height="40px" viewBox="0 0 208 60" enable-background="new 0 0 208 60" xml:space="preserve">
+                                    <g>
+	                                    <g>
+		                                    <path fill="#D2DE26" d="M40.628,44.158c-6.231,2.842-6.126,2.623-8.215,2.564c-3.045-0.207-5.407-1.996-7.324-3.01
+			                                    c-1.905-1.029-3.391-2.523-4.472-4.426c-1.077-1.906-1.822-4.332-2.167-7.307c-0.424-3.624,0.341-6.28,2.454-8.168
+			                                    c2.098-1.887,5.707-2.993,10.646-3.558c2.538-0.222,6.159-0.278,6.878-0.193c0.053-0.02,5.071,3.768,2.097,4.867
+			                                    c-2.926,1.038-4.201-0.033-6.464,0.18c-2.317,0.369-3.858,1.139-4.597,2.383c-0.742,1.242-1.069,2.896-1.014,4.994
+			                                    c0.066,2.506,0.433,4.387,1.073,5.662c0.643,1.27,1.962,2.064,3.974,2.303c1.393,0.074,6.529-1.852,6.552-1.977
+			                                    C40.122,38.434,47.26,40.898,40.628,44.158z"/>
+	                                    </g>
+	                                    <g>
+		                                    <path fill="#D2DE26" d="M58.364,19.804c3.611-0.291,6.49-0.166,8.581,0.561c2.092,0.722,3.49,2.017,4.214,3.938
+			                                    c0.734,1.916,1.851,4.49,1.53,7.666c-0.505,4.98-2.735,8.631-4.827,10.912c-2.113,2.301-5.227,3.377-9.469,3.068
+			                                    c-2.666-0.217-4.874-0.93-6.697-2.014c-1.822-1.09-3.286-2.607-4.404-4.508c-1.115-1.904-1.901-4.262-2.284-7.092
+			                                    c-0.51-3.993,0.274-6.908,2.55-8.957C49.818,21.332,53.499,20.193,58.364,19.804z M51.307,32.703
+			                                    c0.216,1.764,0.445,3.125,0.685,4.082c0.24,0.957,0.755,1.83,1.528,2.623c0.775,0.791,1.914,1.248,3.443,1.324
+			                                    c1.492,0.072,2.591-0.273,3.317-1.018c0.723-0.742,1.192-1.656,1.392-2.721c0.198-1.064,0.321-2.443,0.36-4.137
+			                                    c0.058-2.512-0.202-4.484-0.812-5.896c-0.606-1.417-2.141-2.015-4.581-1.908c-1.737,0.073-3.022,0.462-3.831,1.192
+			                                    c-0.809,0.729-1.283,1.596-1.438,2.622C51.217,29.893,51.198,31.17,51.307,32.703z"/>
+	                                    </g>
+	                                    <g>
+		                                    <path fill="#D2DE26" d="M86.046,21.74c2.354,0.229,4.261,0.846,5.848,1.791c1.582,0.948,2.899,2.219,3.934,3.82
+			                                    c1.03,1.603,1.888,3.569,2.465,5.944c0.912,3.713,0.542,6.479-1.406,8.43c-1.921,1.941-5.686,3.236-10.999,3.756
+			                                    c-3.327,0.299-6.063,0.135-8.094-0.547c-2.037-0.682-3.387-1.93-4.045-3.752c-0.664-1.82-0.631-4.283-0.026-7.33
+			                                    c0.894-4.303,2.538-7.547,4.609-9.584C80.426,22.219,82.886,21.428,86.046,21.74z M81.632,33.625
+			                                    c-0.054,1.721-0.034,3.039,0.063,3.951c0.096,0.912,0.468,1.705,1.142,2.369c0.671,0.664,1.781,0.936,3.295,0.83
+			                                    c1.477-0.105,2.558-0.516,3.212-1.219c0.655-0.703,1.017-1.51,1.107-2.43c0.09-0.92,0.072-2.102-0.045-3.551
+			                                    c-0.175-2.152-0.553-3.852-1.083-5.125c-0.537-1.269-1.592-1.952-3.217-2.025c-1.161-0.051-2.034,0.252-2.652,0.925
+			                                    c-0.618,0.672-1.055,1.515-1.291,2.518C81.925,30.869,81.745,32.123,81.632,33.625z"/>
+	                                    </g>
+	                                    <g>
+		                                    <path fill="#D2DE26" d="M102.977,50.971c-1.945-5.391-4.482-30.11-7.741-39.493c-3.586-10.097,9.176-3.856,10.223,0.884
+			                                    c1.203,4.83,2.297,20.187,2.297,20.187c2.873-3.682,6.018-7.053,9.42-10.103c-0.104-0.192,13.867-2.162,11.299-0.232
+			                                    c3.381,1.428-12.846,10.392-12.447,10.921c0.545,0.473,16.746,11.158,13.703,12.525c-2.574,1.811-5.529,5.98-9.059,2.563
+			                                    c-3.518-3.426-9.469-9.174-9.52-9.215c-0.539,0.674-1.068,1.357-1.588,2.053c0.055,0.055,2.615,8.629,1.967,10.264
+			                                    C110.873,52.938,104.744,55.908,102.977,50.971z"/>
+	                                    </g>
+                                    </g>
+                                    <g>
+	                                    <g>
+		                                    <path fill="#D2DE26" d="M141.662,22.619c2.904-0.703,5.244-0.893,7.104-0.323c1.854,0.564,3.297,1.853,4.336,3.924
+			                                    c1.035,2.063,1.787,4.915,2.193,8.458c0.643,5.555,0.021,9.73-2.125,11.973c-2.127,2.273-6.08,2.748-11.66,1.385
+			                                    c-3.494-0.871-6.369-2.117-8.535-3.465c-2.168-1.355-3.652-2.867-4.471-4.498c-0.814-1.639-0.959-3.451-0.533-5.621
+			                                    c0.643-3.047,2.199-5.367,4.492-7.357C134.77,25.126,137.758,23.565,141.662,22.619z M136.734,35.08
+			                                    c-0.008,1.621,0.055,2.877,0.184,3.77s0.555,1.736,1.295,2.559c0.736,0.818,1.93,1.398,3.555,1.658
+			                                    c1.586,0.254,2.748,0.041,3.467-0.646c0.717-0.689,1.129-1.6,1.254-2.689c0.123-1.094,0.139-2.527,0.055-4.289
+			                                    c-0.125-2.615-0.494-4.664-1.07-6.094c-0.584-1.441-1.816-1.967-3.736-1.71c-1.371,0.18-2.398,0.646-3.102,1.385
+			                                    c-0.705,0.739-1.184,1.57-1.422,2.523C136.973,32.502,136.813,33.674,136.734,35.08z"/>
+	                                    </g>
+	                                    <g>
+		                                    <path fill="#D2DE26" d="M172.113,18.926c2.861,0.334,5.18,1.12,7.096,2.273c1.912,1.157,3.492,2.676,4.719,4.567
+			                                    c1.225,1.896,2.229,4.201,2.887,6.989c1.043,4.357,0.563,7.613-1.773,9.965c-2.309,2.334-6.793,3.967-13.117,4.707
+			                                    c-3.961,0.436-7.219,0.295-9.645-0.492c-2.432-0.783-4.051-2.279-4.854-4.49c-0.813-2.205-0.801-5.213-0.107-8.938
+			                                    c1.023-5.26,2.963-9.224,5.451-11.675C165.283,19.368,168.271,18.472,172.113,18.926z M166.813,33.209
+			                                    c-0.059,2.08-0.027,3.67,0.092,4.771s0.568,2.055,1.373,2.846s2.129,1.1,3.938,0.947c1.764-0.146,3.057-0.656,3.838-1.506
+			                                    c0.785-0.85,1.221-1.816,1.332-2.914c0.113-1.1,0.096-2.51-0.037-4.234c-0.201-2.566-0.646-4.591-1.281-6.112
+			                                    c-0.643-1.517-1.918-2.346-3.883-2.455c-1.402-0.076-2.457,0.278-3.201,1.084c-0.744,0.805-1.268,1.82-1.547,3.031
+			                                    C167.154,29.877,166.941,31.393,166.813,33.209z"/>
+	                                    </g>
+                                    </g>
+                                    <g>
+	                                <defs>
+		                                <path id="SVGID_1_" d="M110.385,6.957c-5.451,5.116-0.193,10.101-0.193,10.101c0.166-4.985,1.945-5.938,2.879-7.786
+			                                c2.127-4.203-1.332-7.922-1.332-7.922S112.072,5.374,110.385,6.957"/>
+	                                </defs>
+	                                <clipPath id="SVGID_2_">
+		                                <use xlink:href="#SVGID_1_"  overflow="visible"/>
+	                                </clipPath>
+	
+		                                <linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="-200.3989" y1="579.7578" x2="-198.1176" y2="579.7578" gradientTransform="matrix(2.4945 0 0 -2.4945 608.5599 1449.8861)">
+		                                <stop  offset="0" style="stop-color:#DEDFE1"/>
+		                                <stop  offset="0.0055" style="stop-color:#DEDFE1"/>
+		                                <stop  offset="1" style="stop-color:#BCBEC0"/>
+	                                </linearGradient>
+	                                <rect x="106.545" y="-9.694" clip-path="url(#SVGID_2_)" fill="url(#SVGID_3_)" width="8.633" height="26.751"/>
+                                </g>
+                                <g>
+	                                <defs>
+		                                <path id="SVGID_4_" d="M116.113,9.097c-7.189,7.373-2.191,16.03-2.191,16.03c1.16-7.901,3.369-9.169,4.787-11.977
+			                                c3.236-6.386,0.037-12.78,0.037-12.78S118.34,6.816,116.113,9.097"/>
+	                                </defs>
+	                                <clipPath id="SVGID_5_">
+		                                <use xlink:href="#SVGID_4_"  overflow="visible"/>
+	                                </clipPath>
+	
+		                                <linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="-182.7412" y1="529.9941" x2="-180.4599" y2="529.9941" gradientTransform="matrix(2.4759 0.3037 0.2165 -1.7629 452.1546 1002.3408)">
+		                                <stop  offset="0" style="stop-color:#DEDFE1"/>
+		                                <stop  offset="0.0055" style="stop-color:#DEDFE1"/>
+		                                <stop  offset="1" style="stop-color:#BCBEC0"/>
+	                                </linearGradient>
+	                                <polygon clip-path="url(#SVGID_5_)" fill="url(#SVGID_6_)" points="113.879,-0.228 122.447,0.824 119.381,25.796 110.813,24.746 	
+		                                "/>
+                                </g>
+                                <g>
+	                                <defs>
+		                                <rect id="SVGID_7_" x="-0.563" y="38.105" width="207.54" height="21.4"/>
+	                                </defs>
+	                                <clipPath id="SVGID_8_">
+		                                <use xlink:href="#SVGID_7_"  overflow="visible"/>
+	                                </clipPath>
+	
+		                                <path clip-path="url(#SVGID_8_)" fill="none" stroke="#D2DE2A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" d="
+		                                M11.578,39.629c0,0,9.015,20,27.693,19.207h120.268c28.236,0.67,36.787-19.707,36.787-19.707"/>
+                                </g>
+                                <rect id="_x3C_פרוסה_x3E__10_" x="2.328" y="0.37" fill="none" width="201.498" height="59.259"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="content-center">
+                            <section id="login">
+                                @Html.Partial("_LoginPartial")
+                            </section>
+                        </div>
+                       <div class="clear-fix"></div>
+                    </div>
+
+                    <div class="content-center shadow">
+
+                        <nav>
+                            <ul id="menu">
+
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                
+                                 <li>   
+                                    @Ajax.ActionLink((string)ViewBag.ConstStrings.AdvSearchHeader, "AdvencedSearch", "Home", null, new AjaxOptions
+                               {
+                                   UpdateTargetId = "render_body_cookoo",
+                                   HttpMethod = "Get",
+                                   InsertionMode = InsertionMode.Replace,
+                                   OnBegin = "DisplayAnimation('block')",
+                                   OnComplete = "DisplayAnimation('none')"
+                               },
+                                   new { @class = "backToMainA" })
+                                </li>
+                                <li>|</li>
+
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">@ViewBag.ConstStrings.NewRecipeHeader</a>
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                        <li>
+                                              @Ajax.ActionLink((string)ViewBag.ConstStrings.CKRcpHeader, "AddNewCkRecipe", "Home", null, new AjaxOptions
+                                         {
+                                             UpdateTargetId = "render_body_cookoo",
+                                             HttpMethod = "Get",
+                                             InsertionMode = InsertionMode.Replace,
+                                             OnBegin = "DisplayAnimation('block')",
+                                             OnComplete = "DisplayAnimation('none')"
+                                         },
+                                             new { @class = "backToMainA" })
+                                        
+                                        </li>
+                                        <li>
+
+                                         @Ajax.ActionLink((string)ViewBag.ConstStrings.ImageRcpHeader, "AddNewImgsRecipe", "Home", null, new AjaxOptions
+                                    {
+                                        UpdateTargetId = "render_body_cookoo",
+                                        HttpMethod = "Get",
+                                        InsertionMode = InsertionMode.Replace,
+                                        OnBegin = "DisplayAnimation('block')",
+                                        OnComplete = "DisplayAnimation('none')"
+                                    },
+                                        new { @class = "backToMainA" })
+
+                                        </li>
+                                        <li>
+
+                                             @Ajax.ActionLink((string)ViewBag.ConstStrings.UrlRcpHeader, "AddNewUrlRecipe", "Home", null, new AjaxOptions
+                                        {
+                                            UpdateTargetId = "render_body_cookoo",
+                                            HttpMethod = "Get",
+                                            InsertionMode = InsertionMode.Replace,
+                                            OnBegin = "DisplayAnimation('block')",
+                                            OnComplete = "DisplayAnimation('none')"
+                                        },
+                                             new { @class = "backToMainA" })
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li>|</li>
+                              
+                             
+                                <li>
+                                    (
+                                        @Html.Action("GetNotReadingCount", "Msgs")
+                                    )
+                                    @Ajax.ActionLink((string)ViewBag.ConstStrings.MessagesHeader, "GetMessagesByTime", "Msgs", null, new AjaxOptions
+                               {
+                                   UpdateTargetId = "render_body_cookoo",
+                                   HttpMethod = "Post",
+                                   InsertionMode = InsertionMode.Replace,
+                                   OnBegin = "DisplayAnimation('block')",
+                                   OnComplete = "DisplayAnimation('none')"
+                               },
+                                    new { @class = "backToMainA" })
+                               </li>
+                                 <li>|</li>
+                                 <li>
+                                    @Ajax.ActionLink((string)ViewBag.ConstStrings.ContactUsHeader, "ContactUs", "Msgs", null, new AjaxOptions
+                               {
+                                   UpdateTargetId = "render_body_cookoo",
+                                   HttpMethod = "Get",
+                                   InsertionMode = InsertionMode.Replace,
+                                   OnBegin = "DisplayAnimation('block')",
+                                   OnComplete = "DisplayAnimation('none')"
+                               },
+                                   new { @class = "backToMainA" })
+                               </li>
+                            }
+                            else
+                            { 
+                                <li >~</li>
+                            }
+                               
+                            </ul>
+                        </nav>
+                    </div>
+                </header>   
+            </div>
+
+            <div id="first_div">             
+                @RenderSection("featured", required: false)
+                
+                <div class="clear-fix">
+                <table class="main-content">
+                    <tr>
+                        
+                        <td id="left-content">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <div class="float-left "><button class="openDock" onclick="BackToMain()">@ViewBag.ConstStrings.BackButton</button></div>
+                            <div class="clear-fix"></div>
+                            @Html.Action("SearchRegion", "Home")
+                        }
+                        </td>
+                        
+                         
+                         <td id="center-content">
+                          @if (User.Identity.IsAuthenticated)
+                          {
+                            <div class="float-right "><button class="openDock" onclick="onSearchButtonClick()">@ViewBag.ConstStrings.SearchButton</button></div>
+                            <div class="float-left "><button class="openDock" onclick="onFriendsButtonClick()">@ViewBag.ConstStrings.FriendsButton</button></div>
+                          }
+                            <div id="render_body_cookoo">
+                                @RenderBody()
+
+                            </div>
+
+                            <div  class="content_center ck_fb_like">
+                             <div class="fb-like"
+                              data-href="http://www.cookoo.us" 
+                              data-show-faces="true" 
+                              data-send="true"></div>
+                            </div>
+
+                            <div class="content_center ck_fb_like_mobile">
+                                 <div class="fb-like"
+                                  data-href="http://www.cookoo.us" 
+                                  data-show-faces="true" data-layout="button_count"
+                                  data-send="true"></div>
+                            </div>
+                        </td>
+                         <td id="right-content">
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                              <div class="float-right "><button class="openDock" onclick="BackToMain()">@ViewBag.ConstStrings.BackButton</button></div>
+                              <div class="clear-fix"></div>
+                            }
+                        </td>
+                    </tr>
+                </table>
+                <div class="content_center">
+                    <h4> @ViewBag.ConstStrings.NomiCredit </h4> 
+                    <img src="@Url.Content("~/Content/Images/nomi_credit.png")" alt="Alternate Text" height="20px"/>
+                </div>             
+                </div>          
+            </div>
+
+        </div>
+        
+        <script>
+
+            function onSearchButtonClick() {
+                document.getElementById('left-content').style.display = 'block';
+                document.getElementById('center-content').style.display = 'none';
+
+            }
+
+            function onFriendsButtonClick() {
+                document.getElementById('right-content').style.display = 'block';
+                document.getElementById('center-content').style.display = 'none';
+            }
+
+            function BackToMain() {
+                if (document.getElementById('center-content').style.display == 'none') {
+                    document.getElementById('right-content').style.display = 'none';
+                    document.getElementById('left-content').style.display = 'none';
+                    document.getElementById('center-content').style.display = 'block';
+                }
+            }
+
+            $(function () {
+                $('.backToMainForm').submit(function () {
+                    BackToMain();
+                });
+
+                $('.backToMainA').click(function () {
+                   
+                    BackToMain();
+                });
+            });
+        </script>
+    </body>
+</html>
