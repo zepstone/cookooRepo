@@ -13,3 +13,8 @@ C:\ziki\Cookoo\CookooOrc\bin\Debug\CookooOrc.pdb
 C:\ziki\Cookoo\CookooOrc\obj\Debug\ResolveAssemblyReference.cache
 C:\ziki\Cookoo\CookooOrc\obj\Debug\CookooOrc.dll
 C:\ziki\Cookoo\CookooOrc\obj\Debug\CookooOrc.pdb
+C:\ziki\repo\cookooRepo\CookooOrc\bin\Debug\CookooOrc.dll
+C:\ziki\repo\cookooRepo\CookooOrc\bin\Debug\CookooOrc.pdb
+C:\ziki\repo\cookooRepo\CookooOrc\obj\Debug\ResolveAssemblyReference.cache
+C:\ziki\repo\cookooRepo\CookooOrc\obj\Debug\CookooOrc.dll
+C:\ziki\repo\cookooRepo\CookooOrc\obj\Debug\CookooOrc.pdb

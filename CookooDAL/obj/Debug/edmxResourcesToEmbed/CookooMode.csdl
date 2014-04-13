@@ -1,75 +1,75 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="CookooModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+<Schema Namespace="db2cf76238e26a4502945ca30c0087afc7Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
   <EntityContainer Name="CookooDBEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Categories" EntityType="CookooModel.Category" />
-    <EntitySet Name="CooKooRecipes" EntityType="CookooModel.CooKooRecipe" />
-    <EntitySet Name="ImageRecipes" EntityType="CookooModel.ImageRecipe" />
-    <EntitySet Name="Images" EntityType="CookooModel.Image" />
-    <EntitySet Name="Languages" EntityType="CookooModel.Language" />
-    <EntitySet Name="Messages" EntityType="CookooModel.Message" />
-    <EntitySet Name="Rcp_Category" EntityType="CookooModel.Rcp_Category" />
-    <EntitySet Name="RecipeDetails" EntityType="CookooModel.RecipeDetail" />
-    <EntitySet Name="RecipeSrcTypes" EntityType="CookooModel.RecipeSrcType" />
-    <EntitySet Name="sysdiagrams" EntityType="CookooModel.sysdiagram" />
-    <EntitySet Name="UrlRecipes" EntityType="CookooModel.UrlRecipe" />
-    <EntitySet Name="User_Recipe" EntityType="CookooModel.User_Recipe" />
-    <EntitySet Name="UserProfiles" EntityType="CookooModel.UserProfile" />
-    <EntitySet Name="webpages_Membership" EntityType="CookooModel.webpages_Membership" />
-    <EntitySet Name="webpages_OAuthMembership" EntityType="CookooModel.webpages_OAuthMembership" />
-    <EntitySet Name="webpages_Roles" EntityType="CookooModel.webpages_Roles" />
-    <AssociationSet Name="FK_Rcp_Category_Category" Association="CookooModel.FK_Rcp_Category_Category">
+    <EntitySet Name="Categories" EntityType="db2cf76238e26a4502945ca30c0087afc7Model.Category" />
+    <EntitySet Name="CooKooRecipes" EntityType="db2cf76238e26a4502945ca30c0087afc7Model.CooKooRecipe" />
+    <EntitySet Name="ImageRecipes" EntityType="db2cf76238e26a4502945ca30c0087afc7Model.ImageRecipe" />
+    <EntitySet Name="Images" EntityType="db2cf76238e26a4502945ca30c0087afc7Model.Image" />
+    <EntitySet Name="Languages" EntityType="db2cf76238e26a4502945ca30c0087afc7Model.Language" />
+    <EntitySet Name="Messages" EntityType="db2cf76238e26a4502945ca30c0087afc7Model.Message" />
+    <EntitySet Name="Rcp_Category" EntityType="db2cf76238e26a4502945ca30c0087afc7Model.Rcp_Category" />
+    <EntitySet Name="RecipeDetails" EntityType="db2cf76238e26a4502945ca30c0087afc7Model.RecipeDetail" />
+    <EntitySet Name="RecipeSrcTypes" EntityType="db2cf76238e26a4502945ca30c0087afc7Model.RecipeSrcType" />
+    <EntitySet Name="sysdiagrams" EntityType="db2cf76238e26a4502945ca30c0087afc7Model.sysdiagram" />
+    <EntitySet Name="UrlRecipes" EntityType="db2cf76238e26a4502945ca30c0087afc7Model.UrlRecipe" />
+    <EntitySet Name="User_Recipe" EntityType="db2cf76238e26a4502945ca30c0087afc7Model.User_Recipe" />
+    <EntitySet Name="UserProfiles" EntityType="db2cf76238e26a4502945ca30c0087afc7Model.UserProfile" />
+    <EntitySet Name="webpages_Membership" EntityType="db2cf76238e26a4502945ca30c0087afc7Model.webpages_Membership" />
+    <EntitySet Name="webpages_OAuthMembership" EntityType="db2cf76238e26a4502945ca30c0087afc7Model.webpages_OAuthMembership" />
+    <EntitySet Name="webpages_Roles" EntityType="db2cf76238e26a4502945ca30c0087afc7Model.webpages_Roles" />
+    <AssociationSet Name="FK_Rcp_Category_Category" Association="db2cf76238e26a4502945ca30c0087afc7Model.FK_Rcp_Category_Category">
       <End Role="Categories" EntitySet="Categories" />
       <End Role="Rcp_Category" EntitySet="Rcp_Category" />
     </AssociationSet>
-    <AssociationSet Name="FK_CooKooRecipe_Image" Association="CookooModel.FK_CooKooRecipe_Image">
+    <AssociationSet Name="FK_CooKooRecipe_Image" Association="db2cf76238e26a4502945ca30c0087afc7Model.FK_CooKooRecipe_Image">
       <End Role="Images" EntitySet="Images" />
       <End Role="CooKooRecipes" EntitySet="CooKooRecipes" />
     </AssociationSet>
-    <AssociationSet Name="FK_CooKooRecipe_RecipeDetails" Association="CookooModel.FK_CooKooRecipe_RecipeDetails">
+    <AssociationSet Name="FK_CooKooRecipe_RecipeDetails" Association="db2cf76238e26a4502945ca30c0087afc7Model.FK_CooKooRecipe_RecipeDetails">
       <End Role="RecipeDetails" EntitySet="RecipeDetails" />
       <End Role="CooKooRecipes" EntitySet="CooKooRecipes" />
     </AssociationSet>
-    <AssociationSet Name="FK_ImageRecipe_ImageRecipe" Association="CookooModel.FK_ImageRecipe_ImageRecipe">
+    <AssociationSet Name="FK_ImageRecipe_ImageRecipe" Association="db2cf76238e26a4502945ca30c0087afc7Model.FK_ImageRecipe_ImageRecipe">
       <End Role="Images" EntitySet="Images" />
       <End Role="ImageRecipes" EntitySet="ImageRecipes" />
     </AssociationSet>
-    <AssociationSet Name="FK_ImageRecipe_RecipeDetails" Association="CookooModel.FK_ImageRecipe_RecipeDetails">
+    <AssociationSet Name="FK_ImageRecipe_RecipeDetails" Association="db2cf76238e26a4502945ca30c0087afc7Model.FK_ImageRecipe_RecipeDetails">
       <End Role="RecipeDetails" EntitySet="RecipeDetails" />
       <End Role="ImageRecipes" EntitySet="ImageRecipes" />
     </AssociationSet>
-    <AssociationSet Name="FK_Message_UserProfile" Association="CookooModel.FK_Message_UserProfile">
+    <AssociationSet Name="FK_Message_UserProfile" Association="db2cf76238e26a4502945ca30c0087afc7Model.FK_Message_UserProfile">
       <End Role="UserProfiles" EntitySet="UserProfiles" />
       <End Role="Messages" EntitySet="Messages" />
     </AssociationSet>
-    <AssociationSet Name="FK_Message_UserProfile1" Association="CookooModel.FK_Message_UserProfile1">
+    <AssociationSet Name="FK_Message_UserProfile1" Association="db2cf76238e26a4502945ca30c0087afc7Model.FK_Message_UserProfile1">
       <End Role="UserProfiles" EntitySet="UserProfiles" />
       <End Role="Messages" EntitySet="Messages" />
     </AssociationSet>
-    <AssociationSet Name="FK_Rcp_Category_RecipeDetails" Association="CookooModel.FK_Rcp_Category_RecipeDetails">
+    <AssociationSet Name="FK_Rcp_Category_RecipeDetails" Association="db2cf76238e26a4502945ca30c0087afc7Model.FK_Rcp_Category_RecipeDetails">
       <End Role="RecipeDetails" EntitySet="RecipeDetails" />
       <End Role="Rcp_Category" EntitySet="Rcp_Category" />
     </AssociationSet>
-    <AssociationSet Name="FK_RecipeDetails_RecipeSrcType" Association="CookooModel.FK_RecipeDetails_RecipeSrcType">
+    <AssociationSet Name="FK_RecipeDetails_RecipeSrcType" Association="db2cf76238e26a4502945ca30c0087afc7Model.FK_RecipeDetails_RecipeSrcType">
       <End Role="RecipeSrcTypes" EntitySet="RecipeSrcTypes" />
       <End Role="RecipeDetails" EntitySet="RecipeDetails" />
     </AssociationSet>
-    <AssociationSet Name="FK_T_RecipeBase_UserProfile" Association="CookooModel.FK_T_RecipeBase_UserProfile">
+    <AssociationSet Name="FK_T_RecipeBase_UserProfile" Association="db2cf76238e26a4502945ca30c0087afc7Model.FK_T_RecipeBase_UserProfile">
       <End Role="UserProfiles" EntitySet="UserProfiles" />
       <End Role="RecipeDetails" EntitySet="RecipeDetails" />
     </AssociationSet>
-    <AssociationSet Name="FK_UrlRecipe_RecipeDetails" Association="CookooModel.FK_UrlRecipe_RecipeDetails">
+    <AssociationSet Name="FK_UrlRecipe_RecipeDetails" Association="db2cf76238e26a4502945ca30c0087afc7Model.FK_UrlRecipe_RecipeDetails">
       <End Role="RecipeDetails" EntitySet="RecipeDetails" />
       <End Role="UrlRecipes" EntitySet="UrlRecipes" />
     </AssociationSet>
-    <AssociationSet Name="FK_User_Recipe_RecipeBase" Association="CookooModel.FK_User_Recipe_RecipeBase">
+    <AssociationSet Name="FK_User_Recipe_RecipeBase" Association="db2cf76238e26a4502945ca30c0087afc7Model.FK_User_Recipe_RecipeBase">
       <End Role="RecipeDetails" EntitySet="RecipeDetails" />
       <End Role="User_Recipe" EntitySet="User_Recipe" />
     </AssociationSet>
-    <AssociationSet Name="FK_Users_Recipes_T_UsersProfile" Association="CookooModel.FK_Users_Recipes_T_UsersProfile">
+    <AssociationSet Name="FK_Users_Recipes_T_UsersProfile" Association="db2cf76238e26a4502945ca30c0087afc7Model.FK_Users_Recipes_T_UsersProfile">
       <End Role="UserProfiles" EntitySet="UserProfiles" />
       <End Role="User_Recipe" EntitySet="User_Recipe" />
     </AssociationSet>
-    <AssociationSet Name="webpages_UsersInRoles" Association="CookooModel.webpages_UsersInRoles">
+    <AssociationSet Name="webpages_UsersInRoles" Association="db2cf76238e26a4502945ca30c0087afc7Model.webpages_UsersInRoles">
       <End Role="UserProfiles" EntitySet="UserProfiles" />
       <End Role="webpages_Roles" EntitySet="webpages_Roles" />
     </AssociationSet>
@@ -80,7 +80,7 @@
     </Key>
     <Property Name="CtgryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-    <NavigationProperty Name="Rcp_Category" Relationship="CookooModel.FK_Rcp_Category_Category" FromRole="Categories" ToRole="Rcp_Category" />
+    <NavigationProperty Name="Rcp_Category" Relationship="db2cf76238e26a4502945ca30c0087afc7Model.FK_Rcp_Category_Category" FromRole="Categories" ToRole="Rcp_Category" />
   </EntityType>
   <EntityType Name="CooKooRecipe">
     <Key>
@@ -92,8 +92,8 @@
     <Property Name="Ingredients" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Name="Instructions" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Name="RegularImageID" Type="Int64" />
-    <NavigationProperty Name="Image" Relationship="CookooModel.FK_CooKooRecipe_Image" FromRole="CooKooRecipes" ToRole="Images" />
-    <NavigationProperty Name="RecipeDetail" Relationship="CookooModel.FK_CooKooRecipe_RecipeDetails" FromRole="CooKooRecipes" ToRole="RecipeDetails" />
+    <NavigationProperty Name="Image" Relationship="db2cf76238e26a4502945ca30c0087afc7Model.FK_CooKooRecipe_Image" FromRole="CooKooRecipes" ToRole="Images" />
+    <NavigationProperty Name="RecipeDetail" Relationship="db2cf76238e26a4502945ca30c0087afc7Model.FK_CooKooRecipe_RecipeDetails" FromRole="CooKooRecipes" ToRole="RecipeDetails" />
   </EntityType>
   <EntityType Name="ImageRecipe">
     <Key>
@@ -103,8 +103,8 @@
     <Property Name="ImgRcp" Type="Int64" Nullable="false" />
     <Property Name="ImgID" Type="Int64" Nullable="false" />
     <Property Name="FakeColumn" Type="Boolean" />
-    <NavigationProperty Name="Image" Relationship="CookooModel.FK_ImageRecipe_ImageRecipe" FromRole="ImageRecipes" ToRole="Images" />
-    <NavigationProperty Name="RecipeDetail" Relationship="CookooModel.FK_ImageRecipe_RecipeDetails" FromRole="ImageRecipes" ToRole="RecipeDetails" />
+    <NavigationProperty Name="Image" Relationship="db2cf76238e26a4502945ca30c0087afc7Model.FK_ImageRecipe_ImageRecipe" FromRole="ImageRecipes" ToRole="Images" />
+    <NavigationProperty Name="RecipeDetail" Relationship="db2cf76238e26a4502945ca30c0087afc7Model.FK_ImageRecipe_RecipeDetails" FromRole="ImageRecipes" ToRole="RecipeDetails" />
   </EntityType>
   <EntityType Name="Image">
     <Key>
@@ -114,8 +114,8 @@
     <Property Name="ImageName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
     <Property Name="ImageData" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
     <Property Name="ContentType" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
-    <NavigationProperty Name="CooKooRecipes" Relationship="CookooModel.FK_CooKooRecipe_Image" FromRole="Images" ToRole="CooKooRecipes" />
-    <NavigationProperty Name="ImageRecipes" Relationship="CookooModel.FK_ImageRecipe_ImageRecipe" FromRole="Images" ToRole="ImageRecipes" />
+    <NavigationProperty Name="CooKooRecipes" Relationship="db2cf76238e26a4502945ca30c0087afc7Model.FK_CooKooRecipe_Image" FromRole="Images" ToRole="CooKooRecipes" />
+    <NavigationProperty Name="ImageRecipes" Relationship="db2cf76238e26a4502945ca30c0087afc7Model.FK_ImageRecipe_ImageRecipe" FromRole="Images" ToRole="ImageRecipes" />
   </EntityType>
   <EntityType Name="Language">
     <Key>
@@ -136,8 +136,8 @@
     <Property Name="MsgContent" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Name="TimeCreated" Type="DateTime" Nullable="false" />
     <Property Name="IsRead" Type="Boolean" Nullable="false" />
-    <NavigationProperty Name="UserProfile" Relationship="CookooModel.FK_Message_UserProfile" FromRole="Messages" ToRole="UserProfiles" />
-    <NavigationProperty Name="UserProfile1" Relationship="CookooModel.FK_Message_UserProfile1" FromRole="Messages" ToRole="UserProfiles" />
+    <NavigationProperty Name="UserProfile" Relationship="db2cf76238e26a4502945ca30c0087afc7Model.FK_Message_UserProfile" FromRole="Messages" ToRole="UserProfiles" />
+    <NavigationProperty Name="UserProfile1" Relationship="db2cf76238e26a4502945ca30c0087afc7Model.FK_Message_UserProfile1" FromRole="Messages" ToRole="UserProfiles" />
   </EntityType>
   <EntityType Name="Rcp_Category">
     <Key>
@@ -147,8 +147,8 @@
     <Property Name="RcpDetailsID" Type="Int64" Nullable="false" />
     <Property Name="CtgryID" Type="Int32" Nullable="false" />
     <Property Name="FakeColumn" Type="Boolean" />
-    <NavigationProperty Name="Category" Relationship="CookooModel.FK_Rcp_Category_Category" FromRole="Rcp_Category" ToRole="Categories" />
-    <NavigationProperty Name="RecipeDetail" Relationship="CookooModel.FK_Rcp_Category_RecipeDetails" FromRole="Rcp_Category" ToRole="RecipeDetails" />
+    <NavigationProperty Name="Category" Relationship="db2cf76238e26a4502945ca30c0087afc7Model.FK_Rcp_Category_Category" FromRole="Rcp_Category" ToRole="Categories" />
+    <NavigationProperty Name="RecipeDetail" Relationship="db2cf76238e26a4502945ca30c0087afc7Model.FK_Rcp_Category_RecipeDetails" FromRole="Rcp_Category" ToRole="RecipeDetails" />
   </EntityType>
   <EntityType Name="RecipeDetail">
     <Key>
@@ -160,13 +160,13 @@
     <Property Name="ImageUrl" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Name="RcpSrcTypeID" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="CooKooRecipe" Relationship="CookooModel.FK_CooKooRecipe_RecipeDetails" FromRole="RecipeDetails" ToRole="CooKooRecipes" />
-    <NavigationProperty Name="ImageRecipes" Relationship="CookooModel.FK_ImageRecipe_RecipeDetails" FromRole="RecipeDetails" ToRole="ImageRecipes" />
-    <NavigationProperty Name="Rcp_Category" Relationship="CookooModel.FK_Rcp_Category_RecipeDetails" FromRole="RecipeDetails" ToRole="Rcp_Category" />
-    <NavigationProperty Name="RecipeSrcType" Relationship="CookooModel.FK_RecipeDetails_RecipeSrcType" FromRole="RecipeDetails" ToRole="RecipeSrcTypes" />
-    <NavigationProperty Name="UserProfile" Relationship="CookooModel.FK_T_RecipeBase_UserProfile" FromRole="RecipeDetails" ToRole="UserProfiles" />
-    <NavigationProperty Name="UrlRecipe" Relationship="CookooModel.FK_UrlRecipe_RecipeDetails" FromRole="RecipeDetails" ToRole="UrlRecipes" />
-    <NavigationProperty Name="User_Recipe" Relationship="CookooModel.FK_User_Recipe_RecipeBase" FromRole="RecipeDetails" ToRole="User_Recipe" />
+    <NavigationProperty Name="CooKooRecipe" Relationship="db2cf76238e26a4502945ca30c0087afc7Model.FK_CooKooRecipe_RecipeDetails" FromRole="RecipeDetails" ToRole="CooKooRecipes" />
+    <NavigationProperty Name="ImageRecipes" Relationship="db2cf76238e26a4502945ca30c0087afc7Model.FK_ImageRecipe_RecipeDetails" FromRole="RecipeDetails" ToRole="ImageRecipes" />
+    <NavigationProperty Name="Rcp_Category" Relationship="db2cf76238e26a4502945ca30c0087afc7Model.FK_Rcp_Category_RecipeDetails" FromRole="RecipeDetails" ToRole="Rcp_Category" />
+    <NavigationProperty Name="RecipeSrcType" Relationship="db2cf76238e26a4502945ca30c0087afc7Model.FK_RecipeDetails_RecipeSrcType" FromRole="RecipeDetails" ToRole="RecipeSrcTypes" />
+    <NavigationProperty Name="UserProfile" Relationship="db2cf76238e26a4502945ca30c0087afc7Model.FK_T_RecipeBase_UserProfile" FromRole="RecipeDetails" ToRole="UserProfiles" />
+    <NavigationProperty Name="UrlRecipe" Relationship="db2cf76238e26a4502945ca30c0087afc7Model.FK_UrlRecipe_RecipeDetails" FromRole="RecipeDetails" ToRole="UrlRecipes" />
+    <NavigationProperty Name="User_Recipe" Relationship="db2cf76238e26a4502945ca30c0087afc7Model.FK_User_Recipe_RecipeBase" FromRole="RecipeDetails" ToRole="User_Recipe" />
   </EntityType>
   <EntityType Name="RecipeSrcType">
     <Key>
@@ -174,7 +174,7 @@
     </Key>
     <Property Name="RcpSrcTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="RecipeTableName" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-    <NavigationProperty Name="RecipeDetails" Relationship="CookooModel.FK_RecipeDetails_RecipeSrcType" FromRole="RecipeSrcTypes" ToRole="RecipeDetails" />
+    <NavigationProperty Name="RecipeDetails" Relationship="db2cf76238e26a4502945ca30c0087afc7Model.FK_RecipeDetails_RecipeSrcType" FromRole="RecipeSrcTypes" ToRole="RecipeDetails" />
   </EntityType>
   <EntityType Name="sysdiagram">
     <Key>
@@ -192,7 +192,7 @@
     </Key>
     <Property Name="UrlRcpID" Type="Int64" Nullable="false" />
     <Property Name="Url" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-    <NavigationProperty Name="RecipeDetail" Relationship="CookooModel.FK_UrlRecipe_RecipeDetails" FromRole="UrlRecipes" ToRole="RecipeDetails" />
+    <NavigationProperty Name="RecipeDetail" Relationship="db2cf76238e26a4502945ca30c0087afc7Model.FK_UrlRecipe_RecipeDetails" FromRole="UrlRecipes" ToRole="RecipeDetails" />
   </EntityType>
   <EntityType Name="User_Recipe">
     <Key>
@@ -202,8 +202,8 @@
     <Property Name="UserID" Type="Int32" Nullable="false" />
     <Property Name="RecipeID" Type="Int64" Nullable="false" />
     <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-    <NavigationProperty Name="RecipeDetail" Relationship="CookooModel.FK_User_Recipe_RecipeBase" FromRole="User_Recipe" ToRole="RecipeDetails" />
-    <NavigationProperty Name="UserProfile" Relationship="CookooModel.FK_Users_Recipes_T_UsersProfile" FromRole="User_Recipe" ToRole="UserProfiles" />
+    <NavigationProperty Name="RecipeDetail" Relationship="db2cf76238e26a4502945ca30c0087afc7Model.FK_User_Recipe_RecipeBase" FromRole="User_Recipe" ToRole="RecipeDetails" />
+    <NavigationProperty Name="UserProfile" Relationship="db2cf76238e26a4502945ca30c0087afc7Model.FK_Users_Recipes_T_UsersProfile" FromRole="User_Recipe" ToRole="UserProfiles" />
   </EntityType>
   <EntityType Name="UserProfile">
     <Key>
@@ -213,11 +213,11 @@
     <Property Name="UserName" Type="String" Nullable="false" MaxLength="56" Unicode="true" FixedLength="false" />
     <Property Name="Language" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Name="Created" Type="DateTime" />
-    <NavigationProperty Name="Messages" Relationship="CookooModel.FK_Message_UserProfile" FromRole="UserProfiles" ToRole="Messages" />
-    <NavigationProperty Name="Messages1" Relationship="CookooModel.FK_Message_UserProfile1" FromRole="UserProfiles" ToRole="Messages" />
-    <NavigationProperty Name="RecipeDetails" Relationship="CookooModel.FK_T_RecipeBase_UserProfile" FromRole="UserProfiles" ToRole="RecipeDetails" />
-    <NavigationProperty Name="User_Recipe" Relationship="CookooModel.FK_Users_Recipes_T_UsersProfile" FromRole="UserProfiles" ToRole="User_Recipe" />
-    <NavigationProperty Name="webpages_Roles" Relationship="CookooModel.webpages_UsersInRoles" FromRole="UserProfiles" ToRole="webpages_Roles" />
+    <NavigationProperty Name="Messages" Relationship="db2cf76238e26a4502945ca30c0087afc7Model.FK_Message_UserProfile" FromRole="UserProfiles" ToRole="Messages" />
+    <NavigationProperty Name="Messages1" Relationship="db2cf76238e26a4502945ca30c0087afc7Model.FK_Message_UserProfile1" FromRole="UserProfiles" ToRole="Messages" />
+    <NavigationProperty Name="RecipeDetails" Relationship="db2cf76238e26a4502945ca30c0087afc7Model.FK_T_RecipeBase_UserProfile" FromRole="UserProfiles" ToRole="RecipeDetails" />
+    <NavigationProperty Name="User_Recipe" Relationship="db2cf76238e26a4502945ca30c0087afc7Model.FK_Users_Recipes_T_UsersProfile" FromRole="UserProfiles" ToRole="User_Recipe" />
+    <NavigationProperty Name="webpages_Roles" Relationship="db2cf76238e26a4502945ca30c0087afc7Model.webpages_UsersInRoles" FromRole="UserProfiles" ToRole="webpages_Roles" />
   </EntityType>
   <EntityType Name="webpages_Membership">
     <Key>
@@ -250,11 +250,11 @@
     </Key>
     <Property Name="RoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="RoleName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
-    <NavigationProperty Name="UserProfiles" Relationship="CookooModel.webpages_UsersInRoles" FromRole="webpages_Roles" ToRole="UserProfiles" />
+    <NavigationProperty Name="UserProfiles" Relationship="db2cf76238e26a4502945ca30c0087afc7Model.webpages_UsersInRoles" FromRole="webpages_Roles" ToRole="UserProfiles" />
   </EntityType>
   <Association Name="FK_Rcp_Category_Category">
-    <End Role="Categories" Type="CookooModel.Category" Multiplicity="1" />
-    <End Role="Rcp_Category" Type="CookooModel.Rcp_Category" Multiplicity="*" />
+    <End Role="Categories" Type="db2cf76238e26a4502945ca30c0087afc7Model.Category" Multiplicity="1" />
+    <End Role="Rcp_Category" Type="db2cf76238e26a4502945ca30c0087afc7Model.Rcp_Category" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Categories">
         <PropertyRef Name="CtgryID" />
@@ -265,10 +265,10 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_CooKooRecipe_Image">
-    <End Role="Images" Type="CookooModel.Image" Multiplicity="0..1">
+    <End Role="Images" Type="db2cf76238e26a4502945ca30c0087afc7Model.Image" Multiplicity="0..1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="CooKooRecipes" Type="CookooModel.CooKooRecipe" Multiplicity="*" />
+    <End Role="CooKooRecipes" Type="db2cf76238e26a4502945ca30c0087afc7Model.CooKooRecipe" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Images">
         <PropertyRef Name="ImageID" />
@@ -279,10 +279,10 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_CooKooRecipe_RecipeDetails">
-    <End Role="RecipeDetails" Type="CookooModel.RecipeDetail" Multiplicity="1">
+    <End Role="RecipeDetails" Type="db2cf76238e26a4502945ca30c0087afc7Model.RecipeDetail" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="CooKooRecipes" Type="CookooModel.CooKooRecipe" Multiplicity="0..1" />
+    <End Role="CooKooRecipes" Type="db2cf76238e26a4502945ca30c0087afc7Model.CooKooRecipe" Multiplicity="0..1" />
     <ReferentialConstraint>
       <Principal Role="RecipeDetails">
         <PropertyRef Name="RcpDetailsID" />
@@ -293,10 +293,10 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_ImageRecipe_ImageRecipe">
-    <End Role="Images" Type="CookooModel.Image" Multiplicity="1">
+    <End Role="Images" Type="db2cf76238e26a4502945ca30c0087afc7Model.Image" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="ImageRecipes" Type="CookooModel.ImageRecipe" Multiplicity="*" />
+    <End Role="ImageRecipes" Type="db2cf76238e26a4502945ca30c0087afc7Model.ImageRecipe" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Images">
         <PropertyRef Name="ImageID" />
@@ -307,10 +307,10 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_ImageRecipe_RecipeDetails">
-    <End Role="RecipeDetails" Type="CookooModel.RecipeDetail" Multiplicity="1">
+    <End Role="RecipeDetails" Type="db2cf76238e26a4502945ca30c0087afc7Model.RecipeDetail" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="ImageRecipes" Type="CookooModel.ImageRecipe" Multiplicity="*" />
+    <End Role="ImageRecipes" Type="db2cf76238e26a4502945ca30c0087afc7Model.ImageRecipe" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="RecipeDetails">
         <PropertyRef Name="RcpDetailsID" />
@@ -321,10 +321,10 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Message_UserProfile">
-    <End Role="UserProfiles" Type="CookooModel.UserProfile" Multiplicity="1">
+    <End Role="UserProfiles" Type="db2cf76238e26a4502945ca30c0087afc7Model.UserProfile" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="Messages" Type="CookooModel.Message" Multiplicity="*" />
+    <End Role="Messages" Type="db2cf76238e26a4502945ca30c0087afc7Model.Message" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="UserProfiles">
         <PropertyRef Name="UserId" />
@@ -335,8 +335,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Message_UserProfile1">
-    <End Role="UserProfiles" Type="CookooModel.UserProfile" Multiplicity="1" />
-    <End Role="Messages" Type="CookooModel.Message" Multiplicity="*" />
+    <End Role="UserProfiles" Type="db2cf76238e26a4502945ca30c0087afc7Model.UserProfile" Multiplicity="1" />
+    <End Role="Messages" Type="db2cf76238e26a4502945ca30c0087afc7Model.Message" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="UserProfiles">
         <PropertyRef Name="UserId" />
@@ -347,10 +347,10 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Rcp_Category_RecipeDetails">
-    <End Role="RecipeDetails" Type="CookooModel.RecipeDetail" Multiplicity="1">
+    <End Role="RecipeDetails" Type="db2cf76238e26a4502945ca30c0087afc7Model.RecipeDetail" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="Rcp_Category" Type="CookooModel.Rcp_Category" Multiplicity="*" />
+    <End Role="Rcp_Category" Type="db2cf76238e26a4502945ca30c0087afc7Model.Rcp_Category" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="RecipeDetails">
         <PropertyRef Name="RcpDetailsID" />
@@ -361,8 +361,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_RecipeDetails_RecipeSrcType">
-    <End Role="RecipeSrcTypes" Type="CookooModel.RecipeSrcType" Multiplicity="1" />
-    <End Role="RecipeDetails" Type="CookooModel.RecipeDetail" Multiplicity="*" />
+    <End Role="RecipeSrcTypes" Type="db2cf76238e26a4502945ca30c0087afc7Model.RecipeSrcType" Multiplicity="1" />
+    <End Role="RecipeDetails" Type="db2cf76238e26a4502945ca30c0087afc7Model.RecipeDetail" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="RecipeSrcTypes">
         <PropertyRef Name="RcpSrcTypeID" />
@@ -373,8 +373,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_T_RecipeBase_UserProfile">
-    <End Role="UserProfiles" Type="CookooModel.UserProfile" Multiplicity="1" />
-    <End Role="RecipeDetails" Type="CookooModel.RecipeDetail" Multiplicity="*" />
+    <End Role="UserProfiles" Type="db2cf76238e26a4502945ca30c0087afc7Model.UserProfile" Multiplicity="1" />
+    <End Role="RecipeDetails" Type="db2cf76238e26a4502945ca30c0087afc7Model.RecipeDetail" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="UserProfiles">
         <PropertyRef Name="UserId" />
@@ -385,10 +385,10 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_UrlRecipe_RecipeDetails">
-    <End Role="RecipeDetails" Type="CookooModel.RecipeDetail" Multiplicity="1">
+    <End Role="RecipeDetails" Type="db2cf76238e26a4502945ca30c0087afc7Model.RecipeDetail" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="UrlRecipes" Type="CookooModel.UrlRecipe" Multiplicity="0..1" />
+    <End Role="UrlRecipes" Type="db2cf76238e26a4502945ca30c0087afc7Model.UrlRecipe" Multiplicity="0..1" />
     <ReferentialConstraint>
       <Principal Role="RecipeDetails">
         <PropertyRef Name="RcpDetailsID" />
@@ -399,10 +399,10 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_User_Recipe_RecipeBase">
-    <End Role="RecipeDetails" Type="CookooModel.RecipeDetail" Multiplicity="1">
+    <End Role="RecipeDetails" Type="db2cf76238e26a4502945ca30c0087afc7Model.RecipeDetail" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="User_Recipe" Type="CookooModel.User_Recipe" Multiplicity="*" />
+    <End Role="User_Recipe" Type="db2cf76238e26a4502945ca30c0087afc7Model.User_Recipe" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="RecipeDetails">
         <PropertyRef Name="RcpDetailsID" />
@@ -413,10 +413,10 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Users_Recipes_T_UsersProfile">
-    <End Role="UserProfiles" Type="CookooModel.UserProfile" Multiplicity="1">
+    <End Role="UserProfiles" Type="db2cf76238e26a4502945ca30c0087afc7Model.UserProfile" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="User_Recipe" Type="CookooModel.User_Recipe" Multiplicity="*" />
+    <End Role="User_Recipe" Type="db2cf76238e26a4502945ca30c0087afc7Model.User_Recipe" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="UserProfiles">
         <PropertyRef Name="UserId" />
@@ -427,7 +427,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="webpages_UsersInRoles">
-    <End Role="UserProfiles" Type="CookooModel.UserProfile" Multiplicity="*" />
-    <End Role="webpages_Roles" Type="CookooModel.webpages_Roles" Multiplicity="*" />
+    <End Role="UserProfiles" Type="db2cf76238e26a4502945ca30c0087afc7Model.UserProfile" Multiplicity="*" />
+    <End Role="webpages_Roles" Type="db2cf76238e26a4502945ca30c0087afc7Model.webpages_Roles" Multiplicity="*" />
   </Association>
 </Schema>

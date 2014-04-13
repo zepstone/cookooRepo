@@ -18,20 +18,20 @@ using System.Runtime.Serialization;
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
 
-[assembly: EdmRelationshipAttribute("CookooDBModel", "FK_Rcp_Category_Category", "Category", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CookooDAL.Category), "Rcp_Category", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CookooDAL.Rcp_Category), true)]
-[assembly: EdmRelationshipAttribute("CookooDBModel", "FK_CooKooRecipe_Image", "Image", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(CookooDAL.Image), "CooKooRecipe", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CookooDAL.CooKooRecipe), true)]
-[assembly: EdmRelationshipAttribute("CookooDBModel", "FK_CooKooRecipe_RecipeDetails", "RecipeDetails", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CookooDAL.RecipeDetail), "CooKooRecipe", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(CookooDAL.CooKooRecipe), true)]
-[assembly: EdmRelationshipAttribute("CookooDBModel", "FK_ImageRecipe_ImageRecipe", "Image", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CookooDAL.Image), "ImageRecipe", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CookooDAL.ImageRecipe), true)]
-[assembly: EdmRelationshipAttribute("CookooDBModel", "FK_ImageRecipe_RecipeDetails", "RecipeDetails", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CookooDAL.RecipeDetail), "ImageRecipe", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CookooDAL.ImageRecipe), true)]
-[assembly: EdmRelationshipAttribute("CookooDBModel", "FK_Message_UserProfile", "UserProfile", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CookooDAL.UserProfile), "Message", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CookooDAL.Message), true)]
-[assembly: EdmRelationshipAttribute("CookooDBModel", "FK_Message_UserProfile1", "UserProfile", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CookooDAL.UserProfile), "Message", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CookooDAL.Message), true)]
-[assembly: EdmRelationshipAttribute("CookooDBModel", "FK_Rcp_Category_RecipeDetails", "RecipeDetails", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CookooDAL.RecipeDetail), "Rcp_Category", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CookooDAL.Rcp_Category), true)]
-[assembly: EdmRelationshipAttribute("CookooDBModel", "FK_RecipeDetails_RecipeSrcType", "RecipeSrcType", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CookooDAL.RecipeSrcType), "RecipeDetails", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CookooDAL.RecipeDetail), true)]
-[assembly: EdmRelationshipAttribute("CookooDBModel", "FK_T_RecipeBase_UserProfile", "UserProfile", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CookooDAL.UserProfile), "RecipeDetails", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CookooDAL.RecipeDetail), true)]
-[assembly: EdmRelationshipAttribute("CookooDBModel", "FK_UrlRecipe_RecipeDetails", "RecipeDetails", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CookooDAL.RecipeDetail), "UrlRecipe", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(CookooDAL.UrlRecipe), true)]
-[assembly: EdmRelationshipAttribute("CookooDBModel", "FK_User_Recipe_RecipeBase", "RecipeDetails", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CookooDAL.RecipeDetail), "User_Recipe", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CookooDAL.User_Recipe), true)]
-[assembly: EdmRelationshipAttribute("CookooDBModel", "FK_Users_Recipes_T_UsersProfile", "UserProfile", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CookooDAL.UserProfile), "User_Recipe", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CookooDAL.User_Recipe), true)]
-[assembly: EdmRelationshipAttribute("CookooDBModel", "webpages_UsersInRoles", "webpages_Roles", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CookooDAL.webpages_Roles), "UserProfile", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CookooDAL.UserProfile))]
+[assembly: EdmRelationshipAttribute("CookooModel", "FK_Rcp_Category_Category", "Categories", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CookooDAL.Category), "Rcp_Category", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CookooDAL.Rcp_Category), true)]
+[assembly: EdmRelationshipAttribute("CookooModel", "FK_CooKooRecipe_Image", "Images", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(CookooDAL.Image), "CooKooRecipes", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CookooDAL.CooKooRecipe), true)]
+[assembly: EdmRelationshipAttribute("CookooModel", "FK_CooKooRecipe_RecipeDetails", "RecipeDetails", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CookooDAL.RecipeDetail), "CooKooRecipes", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(CookooDAL.CooKooRecipe), true)]
+[assembly: EdmRelationshipAttribute("CookooModel", "FK_ImageRecipe_ImageRecipe", "Images", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CookooDAL.Image), "ImageRecipes", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CookooDAL.ImageRecipe), true)]
+[assembly: EdmRelationshipAttribute("CookooModel", "FK_ImageRecipe_RecipeDetails", "RecipeDetails", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CookooDAL.RecipeDetail), "ImageRecipes", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CookooDAL.ImageRecipe), true)]
+[assembly: EdmRelationshipAttribute("CookooModel", "FK_Message_UserProfile", "UserProfiles", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CookooDAL.UserProfile), "Messages", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CookooDAL.Message), true)]
+[assembly: EdmRelationshipAttribute("CookooModel", "FK_Message_UserProfile1", "UserProfiles", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CookooDAL.UserProfile), "Messages", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CookooDAL.Message), true)]
+[assembly: EdmRelationshipAttribute("CookooModel", "FK_Rcp_Category_RecipeDetails", "RecipeDetails", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CookooDAL.RecipeDetail), "Rcp_Category", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CookooDAL.Rcp_Category), true)]
+[assembly: EdmRelationshipAttribute("CookooModel", "FK_RecipeDetails_RecipeSrcType", "RecipeSrcTypes", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CookooDAL.RecipeSrcType), "RecipeDetails", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CookooDAL.RecipeDetail), true)]
+[assembly: EdmRelationshipAttribute("CookooModel", "FK_T_RecipeBase_UserProfile", "UserProfiles", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CookooDAL.UserProfile), "RecipeDetails", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CookooDAL.RecipeDetail), true)]
+[assembly: EdmRelationshipAttribute("CookooModel", "FK_UrlRecipe_RecipeDetails", "RecipeDetails", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CookooDAL.RecipeDetail), "UrlRecipes", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(CookooDAL.UrlRecipe), true)]
+[assembly: EdmRelationshipAttribute("CookooModel", "FK_User_Recipe_RecipeBase", "RecipeDetails", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CookooDAL.RecipeDetail), "User_Recipe", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CookooDAL.User_Recipe), true)]
+[assembly: EdmRelationshipAttribute("CookooModel", "FK_Users_Recipes_T_UsersProfile", "UserProfiles", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CookooDAL.UserProfile), "User_Recipe", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CookooDAL.User_Recipe), true)]
+[assembly: EdmRelationshipAttribute("CookooModel", "webpages_UsersInRoles", "UserProfiles", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CookooDAL.UserProfile), "webpages_Roles", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CookooDAL.webpages_Roles))]
 
 #endregion
 
@@ -118,22 +118,6 @@ namespace CookooDAL
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<Image> Images
-        {
-            get
-            {
-                if ((_Images == null))
-                {
-                    _Images = base.CreateObjectSet<Image>("Images");
-                }
-                return _Images;
-            }
-        }
-        private ObjectSet<Image> _Images;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
         public ObjectSet<ImageRecipe> ImageRecipes
         {
             get
@@ -146,6 +130,22 @@ namespace CookooDAL
             }
         }
         private ObjectSet<ImageRecipe> _ImageRecipes;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Image> Images
+        {
+            get
+            {
+                if ((_Images == null))
+                {
+                    _Images = base.CreateObjectSet<Image>("Images");
+                }
+                return _Images;
+            }
+        }
+        private ObjectSet<Image> _Images;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -359,19 +359,19 @@ namespace CookooDAL
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the Images EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToImages(Image image)
-        {
-            base.AddObject("Images", image);
-        }
-    
-        /// <summary>
         /// Deprecated Method for adding a new object to the ImageRecipes EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddToImageRecipes(ImageRecipe imageRecipe)
         {
             base.AddObject("ImageRecipes", imageRecipe);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Images EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToImages(Image image)
+        {
+            base.AddObject("Images", image);
         }
     
         /// <summary>
@@ -481,7 +481,7 @@ namespace CookooDAL
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CookooDBModel", Name="Category")]
+    [EdmEntityTypeAttribute(NamespaceName="CookooModel", Name="Category")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Category : EntityObject
@@ -565,18 +565,18 @@ namespace CookooDAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CookooDBModel", "FK_Rcp_Category_Category", "Rcp_Category")]
+        [EdmRelationshipNavigationPropertyAttribute("CookooModel", "FK_Rcp_Category_Category", "Rcp_Category")]
         public EntityCollection<Rcp_Category> Rcp_Category
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Rcp_Category>("CookooDBModel.FK_Rcp_Category_Category", "Rcp_Category");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Rcp_Category>("CookooModel.FK_Rcp_Category_Category", "Rcp_Category");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Rcp_Category>("CookooDBModel.FK_Rcp_Category_Category", "Rcp_Category", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Rcp_Category>("CookooModel.FK_Rcp_Category_Category", "Rcp_Category", value);
                 }
             }
         }
@@ -587,7 +587,7 @@ namespace CookooDAL
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CookooDBModel", Name="CooKooRecipe")]
+    [EdmEntityTypeAttribute(NamespaceName="CookooModel", Name="CooKooRecipe")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class CooKooRecipe : EntityObject
@@ -769,16 +769,16 @@ namespace CookooDAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CookooDBModel", "FK_CooKooRecipe_Image", "Image")]
+        [EdmRelationshipNavigationPropertyAttribute("CookooModel", "FK_CooKooRecipe_Image", "Images")]
         public Image Image
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Image>("CookooDBModel.FK_CooKooRecipe_Image", "Image").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Image>("CookooModel.FK_CooKooRecipe_Image", "Images").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Image>("CookooDBModel.FK_CooKooRecipe_Image", "Image").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Image>("CookooModel.FK_CooKooRecipe_Image", "Images").Value = value;
             }
         }
         /// <summary>
@@ -790,13 +790,13 @@ namespace CookooDAL
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Image>("CookooDBModel.FK_CooKooRecipe_Image", "Image");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Image>("CookooModel.FK_CooKooRecipe_Image", "Images");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Image>("CookooDBModel.FK_CooKooRecipe_Image", "Image", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Image>("CookooModel.FK_CooKooRecipe_Image", "Images", value);
                 }
             }
         }
@@ -807,16 +807,16 @@ namespace CookooDAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CookooDBModel", "FK_CooKooRecipe_RecipeDetails", "RecipeDetails")]
+        [EdmRelationshipNavigationPropertyAttribute("CookooModel", "FK_CooKooRecipe_RecipeDetails", "RecipeDetails")]
         public RecipeDetail RecipeDetail
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeDetail>("CookooDBModel.FK_CooKooRecipe_RecipeDetails", "RecipeDetails").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeDetail>("CookooModel.FK_CooKooRecipe_RecipeDetails", "RecipeDetails").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeDetail>("CookooDBModel.FK_CooKooRecipe_RecipeDetails", "RecipeDetails").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeDetail>("CookooModel.FK_CooKooRecipe_RecipeDetails", "RecipeDetails").Value = value;
             }
         }
         /// <summary>
@@ -828,13 +828,13 @@ namespace CookooDAL
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeDetail>("CookooDBModel.FK_CooKooRecipe_RecipeDetails", "RecipeDetails");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeDetail>("CookooModel.FK_CooKooRecipe_RecipeDetails", "RecipeDetails");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<RecipeDetail>("CookooDBModel.FK_CooKooRecipe_RecipeDetails", "RecipeDetails", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<RecipeDetail>("CookooModel.FK_CooKooRecipe_RecipeDetails", "RecipeDetails", value);
                 }
             }
         }
@@ -845,7 +845,7 @@ namespace CookooDAL
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CookooDBModel", Name="Image")]
+    [EdmEntityTypeAttribute(NamespaceName="CookooModel", Name="Image")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Image : EntityObject
@@ -981,18 +981,18 @@ namespace CookooDAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CookooDBModel", "FK_CooKooRecipe_Image", "CooKooRecipe")]
+        [EdmRelationshipNavigationPropertyAttribute("CookooModel", "FK_CooKooRecipe_Image", "CooKooRecipes")]
         public EntityCollection<CooKooRecipe> CooKooRecipes
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CooKooRecipe>("CookooDBModel.FK_CooKooRecipe_Image", "CooKooRecipe");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CooKooRecipe>("CookooModel.FK_CooKooRecipe_Image", "CooKooRecipes");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CooKooRecipe>("CookooDBModel.FK_CooKooRecipe_Image", "CooKooRecipe", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CooKooRecipe>("CookooModel.FK_CooKooRecipe_Image", "CooKooRecipes", value);
                 }
             }
         }
@@ -1003,18 +1003,18 @@ namespace CookooDAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CookooDBModel", "FK_ImageRecipe_ImageRecipe", "ImageRecipe")]
+        [EdmRelationshipNavigationPropertyAttribute("CookooModel", "FK_ImageRecipe_ImageRecipe", "ImageRecipes")]
         public EntityCollection<ImageRecipe> ImageRecipes
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ImageRecipe>("CookooDBModel.FK_ImageRecipe_ImageRecipe", "ImageRecipe");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ImageRecipe>("CookooModel.FK_ImageRecipe_ImageRecipe", "ImageRecipes");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ImageRecipe>("CookooDBModel.FK_ImageRecipe_ImageRecipe", "ImageRecipe", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ImageRecipe>("CookooModel.FK_ImageRecipe_ImageRecipe", "ImageRecipes", value);
                 }
             }
         }
@@ -1025,7 +1025,7 @@ namespace CookooDAL
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CookooDBModel", Name="ImageRecipe")]
+    [EdmEntityTypeAttribute(NamespaceName="CookooModel", Name="ImageRecipe")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class ImageRecipe : EntityObject
@@ -1136,16 +1136,16 @@ namespace CookooDAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CookooDBModel", "FK_ImageRecipe_ImageRecipe", "Image")]
+        [EdmRelationshipNavigationPropertyAttribute("CookooModel", "FK_ImageRecipe_ImageRecipe", "Images")]
         public Image Image
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Image>("CookooDBModel.FK_ImageRecipe_ImageRecipe", "Image").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Image>("CookooModel.FK_ImageRecipe_ImageRecipe", "Images").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Image>("CookooDBModel.FK_ImageRecipe_ImageRecipe", "Image").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Image>("CookooModel.FK_ImageRecipe_ImageRecipe", "Images").Value = value;
             }
         }
         /// <summary>
@@ -1157,13 +1157,13 @@ namespace CookooDAL
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Image>("CookooDBModel.FK_ImageRecipe_ImageRecipe", "Image");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Image>("CookooModel.FK_ImageRecipe_ImageRecipe", "Images");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Image>("CookooDBModel.FK_ImageRecipe_ImageRecipe", "Image", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Image>("CookooModel.FK_ImageRecipe_ImageRecipe", "Images", value);
                 }
             }
         }
@@ -1174,16 +1174,16 @@ namespace CookooDAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CookooDBModel", "FK_ImageRecipe_RecipeDetails", "RecipeDetails")]
+        [EdmRelationshipNavigationPropertyAttribute("CookooModel", "FK_ImageRecipe_RecipeDetails", "RecipeDetails")]
         public RecipeDetail RecipeDetail
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeDetail>("CookooDBModel.FK_ImageRecipe_RecipeDetails", "RecipeDetails").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeDetail>("CookooModel.FK_ImageRecipe_RecipeDetails", "RecipeDetails").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeDetail>("CookooDBModel.FK_ImageRecipe_RecipeDetails", "RecipeDetails").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeDetail>("CookooModel.FK_ImageRecipe_RecipeDetails", "RecipeDetails").Value = value;
             }
         }
         /// <summary>
@@ -1195,13 +1195,13 @@ namespace CookooDAL
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeDetail>("CookooDBModel.FK_ImageRecipe_RecipeDetails", "RecipeDetails");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeDetail>("CookooModel.FK_ImageRecipe_RecipeDetails", "RecipeDetails");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<RecipeDetail>("CookooDBModel.FK_ImageRecipe_RecipeDetails", "RecipeDetails", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<RecipeDetail>("CookooModel.FK_ImageRecipe_RecipeDetails", "RecipeDetails", value);
                 }
             }
         }
@@ -1212,7 +1212,7 @@ namespace CookooDAL
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CookooDBModel", Name="Language")]
+    [EdmEntityTypeAttribute(NamespaceName="CookooModel", Name="Language")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Language : EntityObject
@@ -1319,7 +1319,7 @@ namespace CookooDAL
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CookooDBModel", Name="Message")]
+    [EdmEntityTypeAttribute(NamespaceName="CookooModel", Name="Message")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Message : EntityObject
@@ -1531,16 +1531,16 @@ namespace CookooDAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CookooDBModel", "FK_Message_UserProfile", "UserProfile")]
+        [EdmRelationshipNavigationPropertyAttribute("CookooModel", "FK_Message_UserProfile", "UserProfiles")]
         public UserProfile UserProfile
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UserProfile>("CookooDBModel.FK_Message_UserProfile", "UserProfile").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UserProfile>("CookooModel.FK_Message_UserProfile", "UserProfiles").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UserProfile>("CookooDBModel.FK_Message_UserProfile", "UserProfile").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UserProfile>("CookooModel.FK_Message_UserProfile", "UserProfiles").Value = value;
             }
         }
         /// <summary>
@@ -1552,13 +1552,13 @@ namespace CookooDAL
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UserProfile>("CookooDBModel.FK_Message_UserProfile", "UserProfile");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UserProfile>("CookooModel.FK_Message_UserProfile", "UserProfiles");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<UserProfile>("CookooDBModel.FK_Message_UserProfile", "UserProfile", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<UserProfile>("CookooModel.FK_Message_UserProfile", "UserProfiles", value);
                 }
             }
         }
@@ -1569,16 +1569,16 @@ namespace CookooDAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CookooDBModel", "FK_Message_UserProfile1", "UserProfile")]
+        [EdmRelationshipNavigationPropertyAttribute("CookooModel", "FK_Message_UserProfile1", "UserProfiles")]
         public UserProfile UserProfile1
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UserProfile>("CookooDBModel.FK_Message_UserProfile1", "UserProfile").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UserProfile>("CookooModel.FK_Message_UserProfile1", "UserProfiles").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UserProfile>("CookooDBModel.FK_Message_UserProfile1", "UserProfile").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UserProfile>("CookooModel.FK_Message_UserProfile1", "UserProfiles").Value = value;
             }
         }
         /// <summary>
@@ -1590,13 +1590,13 @@ namespace CookooDAL
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UserProfile>("CookooDBModel.FK_Message_UserProfile1", "UserProfile");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UserProfile>("CookooModel.FK_Message_UserProfile1", "UserProfiles");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<UserProfile>("CookooDBModel.FK_Message_UserProfile1", "UserProfile", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<UserProfile>("CookooModel.FK_Message_UserProfile1", "UserProfiles", value);
                 }
             }
         }
@@ -1607,7 +1607,7 @@ namespace CookooDAL
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CookooDBModel", Name="Rcp_Category")]
+    [EdmEntityTypeAttribute(NamespaceName="CookooModel", Name="Rcp_Category")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Rcp_Category : EntityObject
@@ -1718,16 +1718,16 @@ namespace CookooDAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CookooDBModel", "FK_Rcp_Category_Category", "Category")]
+        [EdmRelationshipNavigationPropertyAttribute("CookooModel", "FK_Rcp_Category_Category", "Categories")]
         public Category Category
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Category>("CookooDBModel.FK_Rcp_Category_Category", "Category").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Category>("CookooModel.FK_Rcp_Category_Category", "Categories").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Category>("CookooDBModel.FK_Rcp_Category_Category", "Category").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Category>("CookooModel.FK_Rcp_Category_Category", "Categories").Value = value;
             }
         }
         /// <summary>
@@ -1739,13 +1739,13 @@ namespace CookooDAL
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Category>("CookooDBModel.FK_Rcp_Category_Category", "Category");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Category>("CookooModel.FK_Rcp_Category_Category", "Categories");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Category>("CookooDBModel.FK_Rcp_Category_Category", "Category", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Category>("CookooModel.FK_Rcp_Category_Category", "Categories", value);
                 }
             }
         }
@@ -1756,16 +1756,16 @@ namespace CookooDAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CookooDBModel", "FK_Rcp_Category_RecipeDetails", "RecipeDetails")]
+        [EdmRelationshipNavigationPropertyAttribute("CookooModel", "FK_Rcp_Category_RecipeDetails", "RecipeDetails")]
         public RecipeDetail RecipeDetail
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeDetail>("CookooDBModel.FK_Rcp_Category_RecipeDetails", "RecipeDetails").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeDetail>("CookooModel.FK_Rcp_Category_RecipeDetails", "RecipeDetails").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeDetail>("CookooDBModel.FK_Rcp_Category_RecipeDetails", "RecipeDetails").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeDetail>("CookooModel.FK_Rcp_Category_RecipeDetails", "RecipeDetails").Value = value;
             }
         }
         /// <summary>
@@ -1777,13 +1777,13 @@ namespace CookooDAL
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeDetail>("CookooDBModel.FK_Rcp_Category_RecipeDetails", "RecipeDetails");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeDetail>("CookooModel.FK_Rcp_Category_RecipeDetails", "RecipeDetails");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<RecipeDetail>("CookooDBModel.FK_Rcp_Category_RecipeDetails", "RecipeDetails", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<RecipeDetail>("CookooModel.FK_Rcp_Category_RecipeDetails", "RecipeDetails", value);
                 }
             }
         }
@@ -1794,7 +1794,7 @@ namespace CookooDAL
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CookooDBModel", Name="RecipeDetail")]
+    [EdmEntityTypeAttribute(NamespaceName="CookooModel", Name="RecipeDetail")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class RecipeDetail : EntityObject
@@ -1978,16 +1978,16 @@ namespace CookooDAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CookooDBModel", "FK_CooKooRecipe_RecipeDetails", "CooKooRecipe")]
+        [EdmRelationshipNavigationPropertyAttribute("CookooModel", "FK_CooKooRecipe_RecipeDetails", "CooKooRecipes")]
         public CooKooRecipe CooKooRecipe
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CooKooRecipe>("CookooDBModel.FK_CooKooRecipe_RecipeDetails", "CooKooRecipe").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CooKooRecipe>("CookooModel.FK_CooKooRecipe_RecipeDetails", "CooKooRecipes").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CooKooRecipe>("CookooDBModel.FK_CooKooRecipe_RecipeDetails", "CooKooRecipe").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CooKooRecipe>("CookooModel.FK_CooKooRecipe_RecipeDetails", "CooKooRecipes").Value = value;
             }
         }
         /// <summary>
@@ -1999,13 +1999,13 @@ namespace CookooDAL
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CooKooRecipe>("CookooDBModel.FK_CooKooRecipe_RecipeDetails", "CooKooRecipe");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CooKooRecipe>("CookooModel.FK_CooKooRecipe_RecipeDetails", "CooKooRecipes");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CooKooRecipe>("CookooDBModel.FK_CooKooRecipe_RecipeDetails", "CooKooRecipe", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CooKooRecipe>("CookooModel.FK_CooKooRecipe_RecipeDetails", "CooKooRecipes", value);
                 }
             }
         }
@@ -2016,18 +2016,18 @@ namespace CookooDAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CookooDBModel", "FK_ImageRecipe_RecipeDetails", "ImageRecipe")]
+        [EdmRelationshipNavigationPropertyAttribute("CookooModel", "FK_ImageRecipe_RecipeDetails", "ImageRecipes")]
         public EntityCollection<ImageRecipe> ImageRecipes
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ImageRecipe>("CookooDBModel.FK_ImageRecipe_RecipeDetails", "ImageRecipe");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ImageRecipe>("CookooModel.FK_ImageRecipe_RecipeDetails", "ImageRecipes");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ImageRecipe>("CookooDBModel.FK_ImageRecipe_RecipeDetails", "ImageRecipe", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ImageRecipe>("CookooModel.FK_ImageRecipe_RecipeDetails", "ImageRecipes", value);
                 }
             }
         }
@@ -2038,18 +2038,18 @@ namespace CookooDAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CookooDBModel", "FK_Rcp_Category_RecipeDetails", "Rcp_Category")]
+        [EdmRelationshipNavigationPropertyAttribute("CookooModel", "FK_Rcp_Category_RecipeDetails", "Rcp_Category")]
         public EntityCollection<Rcp_Category> Rcp_Category
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Rcp_Category>("CookooDBModel.FK_Rcp_Category_RecipeDetails", "Rcp_Category");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Rcp_Category>("CookooModel.FK_Rcp_Category_RecipeDetails", "Rcp_Category");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Rcp_Category>("CookooDBModel.FK_Rcp_Category_RecipeDetails", "Rcp_Category", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Rcp_Category>("CookooModel.FK_Rcp_Category_RecipeDetails", "Rcp_Category", value);
                 }
             }
         }
@@ -2060,16 +2060,16 @@ namespace CookooDAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CookooDBModel", "FK_RecipeDetails_RecipeSrcType", "RecipeSrcType")]
+        [EdmRelationshipNavigationPropertyAttribute("CookooModel", "FK_RecipeDetails_RecipeSrcType", "RecipeSrcTypes")]
         public RecipeSrcType RecipeSrcType
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeSrcType>("CookooDBModel.FK_RecipeDetails_RecipeSrcType", "RecipeSrcType").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeSrcType>("CookooModel.FK_RecipeDetails_RecipeSrcType", "RecipeSrcTypes").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeSrcType>("CookooDBModel.FK_RecipeDetails_RecipeSrcType", "RecipeSrcType").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeSrcType>("CookooModel.FK_RecipeDetails_RecipeSrcType", "RecipeSrcTypes").Value = value;
             }
         }
         /// <summary>
@@ -2081,13 +2081,13 @@ namespace CookooDAL
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeSrcType>("CookooDBModel.FK_RecipeDetails_RecipeSrcType", "RecipeSrcType");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeSrcType>("CookooModel.FK_RecipeDetails_RecipeSrcType", "RecipeSrcTypes");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<RecipeSrcType>("CookooDBModel.FK_RecipeDetails_RecipeSrcType", "RecipeSrcType", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<RecipeSrcType>("CookooModel.FK_RecipeDetails_RecipeSrcType", "RecipeSrcTypes", value);
                 }
             }
         }
@@ -2098,16 +2098,16 @@ namespace CookooDAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CookooDBModel", "FK_T_RecipeBase_UserProfile", "UserProfile")]
+        [EdmRelationshipNavigationPropertyAttribute("CookooModel", "FK_T_RecipeBase_UserProfile", "UserProfiles")]
         public UserProfile UserProfile
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UserProfile>("CookooDBModel.FK_T_RecipeBase_UserProfile", "UserProfile").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UserProfile>("CookooModel.FK_T_RecipeBase_UserProfile", "UserProfiles").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UserProfile>("CookooDBModel.FK_T_RecipeBase_UserProfile", "UserProfile").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UserProfile>("CookooModel.FK_T_RecipeBase_UserProfile", "UserProfiles").Value = value;
             }
         }
         /// <summary>
@@ -2119,13 +2119,13 @@ namespace CookooDAL
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UserProfile>("CookooDBModel.FK_T_RecipeBase_UserProfile", "UserProfile");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UserProfile>("CookooModel.FK_T_RecipeBase_UserProfile", "UserProfiles");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<UserProfile>("CookooDBModel.FK_T_RecipeBase_UserProfile", "UserProfile", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<UserProfile>("CookooModel.FK_T_RecipeBase_UserProfile", "UserProfiles", value);
                 }
             }
         }
@@ -2136,16 +2136,16 @@ namespace CookooDAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CookooDBModel", "FK_UrlRecipe_RecipeDetails", "UrlRecipe")]
+        [EdmRelationshipNavigationPropertyAttribute("CookooModel", "FK_UrlRecipe_RecipeDetails", "UrlRecipes")]
         public UrlRecipe UrlRecipe
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UrlRecipe>("CookooDBModel.FK_UrlRecipe_RecipeDetails", "UrlRecipe").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UrlRecipe>("CookooModel.FK_UrlRecipe_RecipeDetails", "UrlRecipes").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UrlRecipe>("CookooDBModel.FK_UrlRecipe_RecipeDetails", "UrlRecipe").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UrlRecipe>("CookooModel.FK_UrlRecipe_RecipeDetails", "UrlRecipes").Value = value;
             }
         }
         /// <summary>
@@ -2157,13 +2157,13 @@ namespace CookooDAL
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UrlRecipe>("CookooDBModel.FK_UrlRecipe_RecipeDetails", "UrlRecipe");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UrlRecipe>("CookooModel.FK_UrlRecipe_RecipeDetails", "UrlRecipes");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<UrlRecipe>("CookooDBModel.FK_UrlRecipe_RecipeDetails", "UrlRecipe", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<UrlRecipe>("CookooModel.FK_UrlRecipe_RecipeDetails", "UrlRecipes", value);
                 }
             }
         }
@@ -2174,18 +2174,18 @@ namespace CookooDAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CookooDBModel", "FK_User_Recipe_RecipeBase", "User_Recipe")]
+        [EdmRelationshipNavigationPropertyAttribute("CookooModel", "FK_User_Recipe_RecipeBase", "User_Recipe")]
         public EntityCollection<User_Recipe> User_Recipe
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<User_Recipe>("CookooDBModel.FK_User_Recipe_RecipeBase", "User_Recipe");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<User_Recipe>("CookooModel.FK_User_Recipe_RecipeBase", "User_Recipe");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<User_Recipe>("CookooDBModel.FK_User_Recipe_RecipeBase", "User_Recipe", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<User_Recipe>("CookooModel.FK_User_Recipe_RecipeBase", "User_Recipe", value);
                 }
             }
         }
@@ -2196,7 +2196,7 @@ namespace CookooDAL
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CookooDBModel", Name="RecipeSrcType")]
+    [EdmEntityTypeAttribute(NamespaceName="CookooModel", Name="RecipeSrcType")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class RecipeSrcType : EntityObject
@@ -2280,18 +2280,18 @@ namespace CookooDAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CookooDBModel", "FK_RecipeDetails_RecipeSrcType", "RecipeDetails")]
+        [EdmRelationshipNavigationPropertyAttribute("CookooModel", "FK_RecipeDetails_RecipeSrcType", "RecipeDetails")]
         public EntityCollection<RecipeDetail> RecipeDetails
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<RecipeDetail>("CookooDBModel.FK_RecipeDetails_RecipeSrcType", "RecipeDetails");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<RecipeDetail>("CookooModel.FK_RecipeDetails_RecipeSrcType", "RecipeDetails");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<RecipeDetail>("CookooDBModel.FK_RecipeDetails_RecipeSrcType", "RecipeDetails", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<RecipeDetail>("CookooModel.FK_RecipeDetails_RecipeSrcType", "RecipeDetails", value);
                 }
             }
         }
@@ -2302,7 +2302,7 @@ namespace CookooDAL
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CookooDBModel", Name="sysdiagram")]
+    [EdmEntityTypeAttribute(NamespaceName="CookooModel", Name="sysdiagram")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class sysdiagram : EntityObject
@@ -2457,7 +2457,7 @@ namespace CookooDAL
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CookooDBModel", Name="UrlRecipe")]
+    [EdmEntityTypeAttribute(NamespaceName="CookooModel", Name="UrlRecipe")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class UrlRecipe : EntityObject
@@ -2541,16 +2541,16 @@ namespace CookooDAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CookooDBModel", "FK_UrlRecipe_RecipeDetails", "RecipeDetails")]
+        [EdmRelationshipNavigationPropertyAttribute("CookooModel", "FK_UrlRecipe_RecipeDetails", "RecipeDetails")]
         public RecipeDetail RecipeDetail
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeDetail>("CookooDBModel.FK_UrlRecipe_RecipeDetails", "RecipeDetails").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeDetail>("CookooModel.FK_UrlRecipe_RecipeDetails", "RecipeDetails").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeDetail>("CookooDBModel.FK_UrlRecipe_RecipeDetails", "RecipeDetails").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeDetail>("CookooModel.FK_UrlRecipe_RecipeDetails", "RecipeDetails").Value = value;
             }
         }
         /// <summary>
@@ -2562,13 +2562,13 @@ namespace CookooDAL
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeDetail>("CookooDBModel.FK_UrlRecipe_RecipeDetails", "RecipeDetails");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeDetail>("CookooModel.FK_UrlRecipe_RecipeDetails", "RecipeDetails");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<RecipeDetail>("CookooDBModel.FK_UrlRecipe_RecipeDetails", "RecipeDetails", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<RecipeDetail>("CookooModel.FK_UrlRecipe_RecipeDetails", "RecipeDetails", value);
                 }
             }
         }
@@ -2579,7 +2579,7 @@ namespace CookooDAL
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CookooDBModel", Name="User_Recipe")]
+    [EdmEntityTypeAttribute(NamespaceName="CookooModel", Name="User_Recipe")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class User_Recipe : EntityObject
@@ -2690,16 +2690,16 @@ namespace CookooDAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CookooDBModel", "FK_User_Recipe_RecipeBase", "RecipeDetails")]
+        [EdmRelationshipNavigationPropertyAttribute("CookooModel", "FK_User_Recipe_RecipeBase", "RecipeDetails")]
         public RecipeDetail RecipeDetail
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeDetail>("CookooDBModel.FK_User_Recipe_RecipeBase", "RecipeDetails").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeDetail>("CookooModel.FK_User_Recipe_RecipeBase", "RecipeDetails").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeDetail>("CookooDBModel.FK_User_Recipe_RecipeBase", "RecipeDetails").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeDetail>("CookooModel.FK_User_Recipe_RecipeBase", "RecipeDetails").Value = value;
             }
         }
         /// <summary>
@@ -2711,13 +2711,13 @@ namespace CookooDAL
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeDetail>("CookooDBModel.FK_User_Recipe_RecipeBase", "RecipeDetails");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RecipeDetail>("CookooModel.FK_User_Recipe_RecipeBase", "RecipeDetails");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<RecipeDetail>("CookooDBModel.FK_User_Recipe_RecipeBase", "RecipeDetails", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<RecipeDetail>("CookooModel.FK_User_Recipe_RecipeBase", "RecipeDetails", value);
                 }
             }
         }
@@ -2728,16 +2728,16 @@ namespace CookooDAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CookooDBModel", "FK_Users_Recipes_T_UsersProfile", "UserProfile")]
+        [EdmRelationshipNavigationPropertyAttribute("CookooModel", "FK_Users_Recipes_T_UsersProfile", "UserProfiles")]
         public UserProfile UserProfile
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UserProfile>("CookooDBModel.FK_Users_Recipes_T_UsersProfile", "UserProfile").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UserProfile>("CookooModel.FK_Users_Recipes_T_UsersProfile", "UserProfiles").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UserProfile>("CookooDBModel.FK_Users_Recipes_T_UsersProfile", "UserProfile").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UserProfile>("CookooModel.FK_Users_Recipes_T_UsersProfile", "UserProfiles").Value = value;
             }
         }
         /// <summary>
@@ -2749,13 +2749,13 @@ namespace CookooDAL
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UserProfile>("CookooDBModel.FK_Users_Recipes_T_UsersProfile", "UserProfile");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UserProfile>("CookooModel.FK_Users_Recipes_T_UsersProfile", "UserProfiles");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<UserProfile>("CookooDBModel.FK_Users_Recipes_T_UsersProfile", "UserProfile", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<UserProfile>("CookooModel.FK_Users_Recipes_T_UsersProfile", "UserProfiles", value);
                 }
             }
         }
@@ -2766,7 +2766,7 @@ namespace CookooDAL
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CookooDBModel", Name="UserProfile")]
+    [EdmEntityTypeAttribute(NamespaceName="CookooModel", Name="UserProfile")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class UserProfile : EntityObject
@@ -2900,18 +2900,18 @@ namespace CookooDAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CookooDBModel", "FK_Message_UserProfile", "Message")]
+        [EdmRelationshipNavigationPropertyAttribute("CookooModel", "FK_Message_UserProfile", "Messages")]
         public EntityCollection<Message> Messages
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Message>("CookooDBModel.FK_Message_UserProfile", "Message");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Message>("CookooModel.FK_Message_UserProfile", "Messages");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Message>("CookooDBModel.FK_Message_UserProfile", "Message", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Message>("CookooModel.FK_Message_UserProfile", "Messages", value);
                 }
             }
         }
@@ -2922,18 +2922,18 @@ namespace CookooDAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CookooDBModel", "FK_Message_UserProfile1", "Message")]
+        [EdmRelationshipNavigationPropertyAttribute("CookooModel", "FK_Message_UserProfile1", "Messages")]
         public EntityCollection<Message> Messages1
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Message>("CookooDBModel.FK_Message_UserProfile1", "Message");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Message>("CookooModel.FK_Message_UserProfile1", "Messages");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Message>("CookooDBModel.FK_Message_UserProfile1", "Message", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Message>("CookooModel.FK_Message_UserProfile1", "Messages", value);
                 }
             }
         }
@@ -2944,18 +2944,18 @@ namespace CookooDAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CookooDBModel", "FK_T_RecipeBase_UserProfile", "RecipeDetails")]
+        [EdmRelationshipNavigationPropertyAttribute("CookooModel", "FK_T_RecipeBase_UserProfile", "RecipeDetails")]
         public EntityCollection<RecipeDetail> RecipeDetails
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<RecipeDetail>("CookooDBModel.FK_T_RecipeBase_UserProfile", "RecipeDetails");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<RecipeDetail>("CookooModel.FK_T_RecipeBase_UserProfile", "RecipeDetails");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<RecipeDetail>("CookooDBModel.FK_T_RecipeBase_UserProfile", "RecipeDetails", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<RecipeDetail>("CookooModel.FK_T_RecipeBase_UserProfile", "RecipeDetails", value);
                 }
             }
         }
@@ -2966,18 +2966,18 @@ namespace CookooDAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CookooDBModel", "FK_Users_Recipes_T_UsersProfile", "User_Recipe")]
+        [EdmRelationshipNavigationPropertyAttribute("CookooModel", "FK_Users_Recipes_T_UsersProfile", "User_Recipe")]
         public EntityCollection<User_Recipe> User_Recipe
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<User_Recipe>("CookooDBModel.FK_Users_Recipes_T_UsersProfile", "User_Recipe");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<User_Recipe>("CookooModel.FK_Users_Recipes_T_UsersProfile", "User_Recipe");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<User_Recipe>("CookooDBModel.FK_Users_Recipes_T_UsersProfile", "User_Recipe", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<User_Recipe>("CookooModel.FK_Users_Recipes_T_UsersProfile", "User_Recipe", value);
                 }
             }
         }
@@ -2988,18 +2988,18 @@ namespace CookooDAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CookooDBModel", "webpages_UsersInRoles", "webpages_Roles")]
+        [EdmRelationshipNavigationPropertyAttribute("CookooModel", "webpages_UsersInRoles", "webpages_Roles")]
         public EntityCollection<webpages_Roles> webpages_Roles
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<webpages_Roles>("CookooDBModel.webpages_UsersInRoles", "webpages_Roles");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<webpages_Roles>("CookooModel.webpages_UsersInRoles", "webpages_Roles");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<webpages_Roles>("CookooDBModel.webpages_UsersInRoles", "webpages_Roles", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<webpages_Roles>("CookooModel.webpages_UsersInRoles", "webpages_Roles", value);
                 }
             }
         }
@@ -3010,7 +3010,7 @@ namespace CookooDAL
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CookooDBModel", Name="webpages_Membership")]
+    [EdmEntityTypeAttribute(NamespaceName="CookooModel", Name="webpages_Membership")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class webpages_Membership : EntityObject
@@ -3311,7 +3311,7 @@ namespace CookooDAL
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CookooDBModel", Name="webpages_OAuthMembership")]
+    [EdmEntityTypeAttribute(NamespaceName="CookooModel", Name="webpages_OAuthMembership")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class webpages_OAuthMembership : EntityObject
@@ -3421,7 +3421,7 @@ namespace CookooDAL
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CookooDBModel", Name="webpages_Roles")]
+    [EdmEntityTypeAttribute(NamespaceName="CookooModel", Name="webpages_Roles")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class webpages_Roles : EntityObject
@@ -3505,18 +3505,18 @@ namespace CookooDAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CookooDBModel", "webpages_UsersInRoles", "UserProfile")]
+        [EdmRelationshipNavigationPropertyAttribute("CookooModel", "webpages_UsersInRoles", "UserProfiles")]
         public EntityCollection<UserProfile> UserProfiles
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<UserProfile>("CookooDBModel.webpages_UsersInRoles", "UserProfile");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<UserProfile>("CookooModel.webpages_UsersInRoles", "UserProfiles");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<UserProfile>("CookooDBModel.webpages_UsersInRoles", "UserProfile", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<UserProfile>("CookooModel.webpages_UsersInRoles", "UserProfiles", value);
                 }
             }
         }

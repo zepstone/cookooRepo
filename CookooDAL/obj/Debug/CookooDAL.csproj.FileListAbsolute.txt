@@ -25,3 +25,13 @@ C:\ziki\Cookoo\CookooDAL\bin\Debug\EntityFramework.xml
 C:\ziki\Cookoo\CookooDAL\obj\Debug\ResolveAssemblyReference.cache
 C:\ziki\Cookoo\CookooDAL\obj\Debug\CookooDAL.dll
 C:\ziki\Cookoo\CookooDAL\obj\Debug\CookooDAL.pdb
+C:\ziki\repo\cookooRepo\CookooDAL\bin\Debug\CookooDAL.dll.config
+C:\ziki\repo\cookooRepo\CookooDAL\bin\Debug\CookooDAL.dll
+C:\ziki\repo\cookooRepo\CookooDAL\bin\Debug\CookooDAL.pdb
+C:\ziki\repo\cookooRepo\CookooDAL\bin\Debug\CookooOrc.dll
+C:\ziki\repo\cookooRepo\CookooDAL\bin\Debug\EntityFramework.dll
+C:\ziki\repo\cookooRepo\CookooDAL\bin\Debug\CookooOrc.pdb
+C:\ziki\repo\cookooRepo\CookooDAL\bin\Debug\EntityFramework.xml
+C:\ziki\repo\cookooRepo\CookooDAL\obj\Debug\ResolveAssemblyReference.cache
+C:\ziki\repo\cookooRepo\CookooDAL\obj\Debug\CookooDAL.dll
+C:\ziki\repo\cookooRepo\CookooDAL\obj\Debug\CookooDAL.pdb

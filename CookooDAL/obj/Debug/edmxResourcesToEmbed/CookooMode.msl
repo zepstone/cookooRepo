@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="CookooModelStoreContainer" CdmEntityContainer="CookooDBEntities">
+  <EntityContainerMapping StorageEntityContainer="db2cf76238e26a4502945ca30c0087afc7ModelStoreContainer" CdmEntityContainer="CookooDBEntities">
     <EntitySetMapping Name="Categories">
-      <EntityTypeMapping TypeName="CookooModel.Category">
+      <EntityTypeMapping TypeName="db2cf76238e26a4502945ca30c0087afc7Model.Category">
         <MappingFragment StoreEntitySet="Categories">
           <ScalarProperty Name="CtgryID" ColumnName="CtgryID" />
           <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
@@ -10,7 +10,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="CooKooRecipes">
-      <EntityTypeMapping TypeName="CookooModel.CooKooRecipe">
+      <EntityTypeMapping TypeName="db2cf76238e26a4502945ca30c0087afc7Model.CooKooRecipe">
         <MappingFragment StoreEntitySet="CooKooRecipes">
           <ScalarProperty Name="CKRcpID" ColumnName="CKRcpID" />
           <ScalarProperty Name="DoesCount" ColumnName="DoesCount" />
@@ -22,7 +22,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ImageRecipes">
-      <EntityTypeMapping TypeName="CookooModel.ImageRecipe">
+      <EntityTypeMapping TypeName="db2cf76238e26a4502945ca30c0087afc7Model.ImageRecipe">
         <MappingFragment StoreEntitySet="ImageRecipes">
           <ScalarProperty Name="ImgRcp" ColumnName="ImgRcp" />
           <ScalarProperty Name="ImgID" ColumnName="ImgID" />
@@ -31,7 +31,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Images">
-      <EntityTypeMapping TypeName="CookooModel.Image">
+      <EntityTypeMapping TypeName="db2cf76238e26a4502945ca30c0087afc7Model.Image">
         <MappingFragment StoreEntitySet="Images">
           <ScalarProperty Name="ImageID" ColumnName="ImageID" />
           <ScalarProperty Name="ImageName" ColumnName="ImageName" />
@@ -41,7 +41,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Languages">
-      <EntityTypeMapping TypeName="CookooModel.Language">
+      <EntityTypeMapping TypeName="db2cf76238e26a4502945ca30c0087afc7Model.Language">
         <MappingFragment StoreEntitySet="Languages">
           <ScalarProperty Name="LanguageID" ColumnName="LanguageID" />
           <ScalarProperty Name="Language1" ColumnName="Language1" />
@@ -50,7 +50,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Messages">
-      <EntityTypeMapping TypeName="CookooModel.Message">
+      <EntityTypeMapping TypeName="db2cf76238e26a4502945ca30c0087afc7Model.Message">
         <MappingFragment StoreEntitySet="Messages">
           <ScalarProperty Name="MsgID" ColumnName="MsgID" />
           <ScalarProperty Name="FromUserID" ColumnName="FromUserID" />
@@ -63,7 +63,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Rcp_Category">
-      <EntityTypeMapping TypeName="CookooModel.Rcp_Category">
+      <EntityTypeMapping TypeName="db2cf76238e26a4502945ca30c0087afc7Model.Rcp_Category">
         <MappingFragment StoreEntitySet="Rcp_Category">
           <ScalarProperty Name="RcpDetailsID" ColumnName="RcpDetailsID" />
           <ScalarProperty Name="CtgryID" ColumnName="CtgryID" />
@@ -72,7 +72,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="RecipeDetails">
-      <EntityTypeMapping TypeName="CookooModel.RecipeDetail">
+      <EntityTypeMapping TypeName="db2cf76238e26a4502945ca30c0087afc7Model.RecipeDetail">
         <MappingFragment StoreEntitySet="RecipeDetails">
           <ScalarProperty Name="RcpDetailsID" ColumnName="RcpDetailsID" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -84,7 +84,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="RecipeSrcTypes">
-      <EntityTypeMapping TypeName="CookooModel.RecipeSrcType">
+      <EntityTypeMapping TypeName="db2cf76238e26a4502945ca30c0087afc7Model.RecipeSrcType">
         <MappingFragment StoreEntitySet="RecipeSrcTypes">
           <ScalarProperty Name="RcpSrcTypeID" ColumnName="RcpSrcTypeID" />
           <ScalarProperty Name="RecipeTableName" ColumnName="RecipeTableName" />
@@ -92,7 +92,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="CookooModel.sysdiagram">
+      <EntityTypeMapping TypeName="db2cf76238e26a4502945ca30c0087afc7Model.sysdiagram">
         <MappingFragment StoreEntitySet="sysdiagrams">
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -103,7 +103,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="UrlRecipes">
-      <EntityTypeMapping TypeName="CookooModel.UrlRecipe">
+      <EntityTypeMapping TypeName="db2cf76238e26a4502945ca30c0087afc7Model.UrlRecipe">
         <MappingFragment StoreEntitySet="UrlRecipes">
           <ScalarProperty Name="UrlRcpID" ColumnName="UrlRcpID" />
           <ScalarProperty Name="Url" ColumnName="Url" />
@@ -111,7 +111,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="User_Recipe">
-      <EntityTypeMapping TypeName="CookooModel.User_Recipe">
+      <EntityTypeMapping TypeName="db2cf76238e26a4502945ca30c0087afc7Model.User_Recipe">
         <MappingFragment StoreEntitySet="User_Recipe">
           <ScalarProperty Name="UserID" ColumnName="UserID" />
           <ScalarProperty Name="RecipeID" ColumnName="RecipeID" />
@@ -120,7 +120,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="UserProfiles">
-      <EntityTypeMapping TypeName="CookooModel.UserProfile">
+      <EntityTypeMapping TypeName="db2cf76238e26a4502945ca30c0087afc7Model.UserProfile">
         <MappingFragment StoreEntitySet="UserProfiles">
           <ScalarProperty Name="UserId" ColumnName="UserId" />
           <ScalarProperty Name="UserName" ColumnName="UserName" />
@@ -130,7 +130,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="webpages_Membership">
-      <EntityTypeMapping TypeName="CookooModel.webpages_Membership">
+      <EntityTypeMapping TypeName="db2cf76238e26a4502945ca30c0087afc7Model.webpages_Membership">
         <MappingFragment StoreEntitySet="webpages_Membership">
           <ScalarProperty Name="UserId" ColumnName="UserId" />
           <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
@@ -147,7 +147,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="webpages_OAuthMembership">
-      <EntityTypeMapping TypeName="CookooModel.webpages_OAuthMembership">
+      <EntityTypeMapping TypeName="db2cf76238e26a4502945ca30c0087afc7Model.webpages_OAuthMembership">
         <MappingFragment StoreEntitySet="webpages_OAuthMembership">
           <ScalarProperty Name="Provider" ColumnName="Provider" />
           <ScalarProperty Name="ProviderUserId" ColumnName="ProviderUserId" />
@@ -156,14 +156,14 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="webpages_Roles">
-      <EntityTypeMapping TypeName="CookooModel.webpages_Roles">
+      <EntityTypeMapping TypeName="db2cf76238e26a4502945ca30c0087afc7Model.webpages_Roles">
         <MappingFragment StoreEntitySet="webpages_Roles">
           <ScalarProperty Name="RoleId" ColumnName="RoleId" />
           <ScalarProperty Name="RoleName" ColumnName="RoleName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="webpages_UsersInRoles" TypeName="CookooModel.webpages_UsersInRoles" StoreEntitySet="webpages_UsersInRoles">
+    <AssociationSetMapping Name="webpages_UsersInRoles" TypeName="db2cf76238e26a4502945ca30c0087afc7Model.webpages_UsersInRoles" StoreEntitySet="webpages_UsersInRoles">
       <EndProperty Name="UserProfiles">
         <ScalarProperty Name="UserId" ColumnName="UserProfiles_UserId" />
       </EndProperty>
